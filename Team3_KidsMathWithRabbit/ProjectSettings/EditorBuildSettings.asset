@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/OZ/Scenes/OZ_LevelOne.unity
+    guid: e03466084c7403147a011fcda7206154
+  - enabled: 1
+    path: Assets/OZ/Scenes/OZ_Compare.unity
+    guid: 3d7dc10ba1bdcf844a1616d0d8c09c83
   m_configObjects: {}
