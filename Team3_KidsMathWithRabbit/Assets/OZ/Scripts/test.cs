@@ -17,8 +17,8 @@ public class test : MonoBehaviour
         
     }
 
-    public void nextScene()
+    public void nextScene(string name)
     {
-        SceneManager.LoadScene("OZ_Compare");
+        SceneManager.LoadScene(name);
     }
 }
