@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class K_test : MonoBehaviour
+public class ChangeScene : MonoBehaviour
 {
     // Start is called before the first frame update
     void CompareStart()

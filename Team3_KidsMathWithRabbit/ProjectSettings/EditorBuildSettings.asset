@@ -59,4 +59,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Srujana/Scenes/Youtube.unity
     guid: b24f8fa76c84744438eb528afbb0a4f4
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Kuraloviyan/Scenes/K_Compare.unity
+    guid: 09dadb0454952a04d87d15ca6e6d9a7d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Kuraloviyan/Scenes/K_FirstLevel.unity
+    guid: 47e85bbfb579fcc41b494bac89a08b86
   m_configObjects: {}
