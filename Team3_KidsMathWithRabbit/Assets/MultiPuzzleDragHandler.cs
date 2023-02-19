@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CountingDragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class MultiPuzzleDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public static GameObject itemBeingDragged;
+    public static GameObject buttonsBeingDragged;
     Vector3 startPosition;
     Transform startParent;
     public void OnBeginDrag(PointerEventData eventData)
     {
-        itemBeingDragged = gameObject;
+        buttonsBeingDragged = gameObject;
         startPosition = transform.position;
         startParent = transform.parent;
-       // GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -23,9 +22,7 @@ public class CountingDragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
     public void OnEndDrag(PointerEventData eventData)
     {
-
-        itemBeingDragged = null;
-        //GetComponent<CanvasGroup>().blocksRaycasts = true;
+        buttonsBeingDragged = null;
         if (transform.parent != startParent)
         {
             transform.position = startPosition;
