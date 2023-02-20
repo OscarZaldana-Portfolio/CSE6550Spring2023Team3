@@ -45,8 +45,14 @@ EditorBuildSettings:
     path: Assets/Srujana/Scenes/Shop.unity
     guid: dcd60a95db36a4c6b98b7513f236d68f
   - enabled: 1
+    path: Assets/Kuraloviyan/Scenes/K_MultiplicationPuzzle.unity
+    guid: 96df5de4c758f9a43b68970f60e49972
+  - enabled: 1
     path: Assets/Srujana/Scenes/Subracting Puzzle.unity
     guid: e85926a87b5f7476bb2646f6dda37d79
+  - enabled: 1
+    path: Assets/Kuraloviyan/Scenes/K_Compare.unity
+    guid: a2e9d90ad689f2f4bb031d4076e6d22e
   - enabled: 1
     path: Assets/Srujana/Scenes/Subtracting Fun.unity
     guid: 5cafda7f910fc484db573c1e41eb6f81
