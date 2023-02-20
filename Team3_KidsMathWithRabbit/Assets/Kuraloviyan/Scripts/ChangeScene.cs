@@ -17,7 +17,7 @@ public class ChangeScene : MonoBehaviour
         
     }
 
-    public void nextCompareScene(string Cname)
+    public void nextScene(string Cname)
     {
         SceneManager.LoadScene(Cname);
     }
