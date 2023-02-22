@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class test : MonoBehaviour
+public class readinput : MonoBehaviour
 {
+    private string input;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +16,9 @@ public class test : MonoBehaviour
     {
         
     }
-
-    public void nextScene(string name)
+    public void ReadStringInput(string s)
     {
-        SceneManager.LoadScene(name);
+        input =s;
+        Debug.Log(input);
     }
 }

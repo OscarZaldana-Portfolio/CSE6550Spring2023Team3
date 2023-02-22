@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class test : MonoBehaviour
+public class ChangeScene : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,8 +17,8 @@ public class test : MonoBehaviour
         
     }
 
-    public void nextScene(string name)
+    public void nextScene(string sceneName)
     {
-        SceneManager.LoadScene(name);
+        SceneManager.LoadScene(sceneName);
     }
 }

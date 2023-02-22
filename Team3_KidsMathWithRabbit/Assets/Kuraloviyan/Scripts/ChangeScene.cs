@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class test : MonoBehaviour
+public class ChangeofScene : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void CompareStart()
     {
         
     }
 
     // Update is called once per frame
-    void Update()
+    void CompareUpdate()
     {
         
     }
 
-    public void nextScene(string name)
+    public void nextloadScene(string Cname)
     {
-        SceneManager.LoadScene(name);
+        SceneManager.LoadScene(Cname);
     }
 }
