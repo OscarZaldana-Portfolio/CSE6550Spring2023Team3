@@ -12,6 +12,7 @@ EditorBuildSettings:
     path: Assets/OZ/Scenes/OZ_Compare.unity
     guid: 3d7dc10ba1bdcf844a1616d0d8c09c83
   - enabled: 1
+<<<<<<< Updated upstream
     path: Assets/Srujana/Scenes/Adding Fun.unity
     guid: 8c9218e97bd28264489a7fb81edaba69
   - enabled: 1
@@ -77,4 +78,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Kuraloviyan/Scenes/K_FirstLevel.unity
     guid: 47e85bbfb579fcc41b494bac89a08b86
+=======
+    path: Assets/Dhanashree/Scenes/D_MultiplicationPuzzle.unity
+    guid: e6b3e0325e6bb5f4cbd6cb9ceee3cbf2
+  - enabled: 1
+    path: Assets/Kuraloviyan/Scenes/K_MultiplicationPuzzle.unity
+    guid: 0fbf97dfacd109449aac61b00e6bfaaf
+  - enabled: 1
+    path: Assets/Kuraloviyan/Scenes/K_Compare.unity
+    guid: a2e9d90ad689f2f4bb031d4076e6d22e
+>>>>>>> Stashed changes
   m_configObjects: {}
