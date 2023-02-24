@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Slots : MonoBehaviour, IDropHandler
+public class PuzzleSlot : MonoBehaviour, IDropHandler
 {
     public GameObject item
     {
@@ -21,7 +21,7 @@ public class Slots : MonoBehaviour, IDropHandler
     {
         if (!item)
         {
-            CountingDragDrop.itemBeingDragged.transform.SetParent(transform);
+            MultiPuzzleDragHandler.buttonsBeingDragged.transform.SetParent(transform);
         }
     }
 
