@@ -12,7 +12,8 @@ public class Z_AccessRandomNumbers : MonoBehaviour
     public TMP_Text topChoiceText;
     public TMP_Text middleChoiceText;
     public TMP_Text lowerChoiceText;
-    public TMP_Text upperChoiceText;
+    public GameObject leftQuestionSectionPanel;
+    public RectTransform leftQuestionRectTransform;
 
     int level = 1;
     int leftOperand = 0;

@@ -18,7 +18,7 @@ public class AzureButton : MonoBehaviour
 
     void TaskOnClick()
     {
-        StartCoroutine(SendDataToAzure(inputField.text));
+        //StartCoroutine(SendDataToAzure(inputField.text));
     }
 
     async Task SendDataToAzure(string data)
