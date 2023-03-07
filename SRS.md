@@ -1,3 +1,4 @@
+[Software Requirement Specification.docx (1) (1).docx](https://github.com/OscarZaldana-Portfolio/CSE6550Spring2023Team3/files/10913472/Software.Requirement.Specification.docx.1.1.docx)
 | Date  | Updates |
 | ------------- | ------------- |
 | 6th March, 2023 | ● Updated User Interface <br> ● Updated UML figures 
