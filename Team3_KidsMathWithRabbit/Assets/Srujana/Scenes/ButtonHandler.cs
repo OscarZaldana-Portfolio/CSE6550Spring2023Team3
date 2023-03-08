@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Collections;
@@ -18,11 +18,9 @@ public class AzureButton : MonoBehaviour
 
     void TaskOnClick()
     {
-<<<<<<< HEAD
+
         StartCoroutine(SendDataToAzure(inputField.text));
-=======
-        //StartCoroutine(SendDataToAzure(inputField.text));
->>>>>>> main
+
     }
 
     async Task SendDataToAzure(string data)
@@ -39,3 +37,4 @@ public class AzureButton : MonoBehaviour
         }
     }
 }
+*/
