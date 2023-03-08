@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/MainGame/Scenes/MainMenu.unity
+    guid: 1e1a0b93b5a466b4592c68a081db3d89
+  - enabled: 1
+    path: Assets/MainGame/Scenes/Mulitplication Puzzle.unity
+    guid: f5631977ff5a4b645a6bfd9f1638bbc9
+  - enabled: 1
+    path: Assets/MainGame/Scenes/Multiplication Fun.unity
+    guid: c7d3af48b05d3334eb6e62df143bf35f
+  - enabled: 1
+    path: Assets/MainGame/Scenes/Multiplication Quiz.unity
+    guid: 1efe2cd2610a6144a82b594e1e2b36d5
+  - enabled: 1
+    path: Assets/MainGame/Scenes/Multiplication Practice.unity
+    guid: 44357b33466943a45b5faad72dac762b
+  - enabled: 1
     path: Assets/OZ/Scenes/OZ_LevelOne.unity
     guid: e03466084c7403147a011fcda7206154
   - enabled: 1
