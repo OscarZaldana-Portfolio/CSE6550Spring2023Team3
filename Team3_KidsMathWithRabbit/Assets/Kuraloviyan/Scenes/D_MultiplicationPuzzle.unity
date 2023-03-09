@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 116524791}
   - component: {fileID: 116524794}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: AnswerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -489,9 +489,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 116524789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 772d08287905aea4da851d000560c903, type: 3}
+  m_Script: {fileID: 11500000, guid: e4df6f55da4d25b47b1cefe7fedc1450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  answerSlot: {fileID: 1688843986}
+  desiredDuration: 10
+  answerText: {fileID: 1915232430}
+  currentText: {fileID: 1915232430}
+  answerTextPosition: {fileID: 1688843986}
+  d: 0
 --- !u!1 &190295196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,7 +1007,7 @@ GameObject:
   - component: {fileID: 639260316}
   - component: {fileID: 639260319}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: SecondValueButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1119,9 +1125,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 639260314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 772d08287905aea4da851d000560c903, type: 3}
+  m_Script: {fileID: 11500000, guid: e4df6f55da4d25b47b1cefe7fedc1450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  answerSlot: {fileID: 1301649730}
+  desiredDuration: 10
+  answerText: {fileID: 73985022}
+  currentText: {fileID: 73985022}
+  answerTextPosition: {fileID: 1301649730}
+  d: 0
 --- !u!1 &822429401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,7 +1147,7 @@ GameObject:
   - component: {fileID: 822429403}
   - component: {fileID: 822429405}
   m_Layer: 5
-  m_Name: Slot
+  m_Name: isEquals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1224,7 +1236,6 @@ GameObject:
   - component: {fileID: 836504164}
   - component: {fileID: 836504163}
   - component: {fileID: 836504162}
-  - component: {fileID: 836504165}
   - component: {fileID: 836504166}
   m_Layer: 5
   m_Name: FirstValueButton
@@ -1336,18 +1347,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836504160}
   m_CullTransparentMesh: 1
---- !u!114 &836504165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 836504160}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 772d08287905aea4da851d000560c903, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &836504166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1815,7 +1814,7 @@ GameObject:
   - component: {fileID: 1262050563}
   - component: {fileID: 1262050566}
   m_Layer: 5
-  m_Name: Button
+  m_Name: EqualsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1933,9 +1932,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1262050561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 772d08287905aea4da851d000560c903, type: 3}
+  m_Script: {fileID: 11500000, guid: e4df6f55da4d25b47b1cefe7fedc1450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  answerSlot: {fileID: 822429402}
+  desiredDuration: 10
+  answerText: {fileID: 190295198}
+  currentText: {fileID: 190295198}
+  answerTextPosition: {fileID: 822429402}
+  d: 0
 --- !u!1 &1301649729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1949,7 +1954,7 @@ GameObject:
   - component: {fileID: 1301649731}
   - component: {fileID: 1301649733}
   m_Layer: 5
-  m_Name: Slot
+  m_Name: isRightValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2493,7 +2498,7 @@ GameObject:
   - component: {fileID: 1614302488}
   - component: {fileID: 1614302490}
   m_Layer: 5
-  m_Name: Slot
+  m_Name: isMultiply
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2718,7 +2723,7 @@ GameObject:
   - component: {fileID: 1688843987}
   - component: {fileID: 1688843989}
   m_Layer: 5
-  m_Name: Slot
+  m_Name: isAnswerValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2877,7 +2882,7 @@ GameObject:
   - component: {fileID: 1853119959}
   - component: {fileID: 1853119962}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: MultiplyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2995,9 +3000,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1853119957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 772d08287905aea4da851d000560c903, type: 3}
+  m_Script: {fileID: 11500000, guid: e4df6f55da4d25b47b1cefe7fedc1450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  answerSlot: {fileID: 1614302487}
+  desiredDuration: 10
+  answerText: {fileID: 2064707365}
+  currentText: {fileID: 2064707365}
+  answerTextPosition: {fileID: 1614302487}
+  d: 0
 --- !u!1 &1894274677
 GameObject:
   m_ObjectHideFlags: 0
