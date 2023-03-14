@@ -1,6 +1,8 @@
-[Software Requirement Specification.docx (1) (1).docx](https://github.com/OscarZaldana-Portfolio/CSE6550Spring2023Team3/files/10913472/Software.Requirement.Specification.docx.1.1.docx)
+[Software.Requirement.Specification.docx.1.1 (3).docx](https://github.com/OscarZaldana-Portfolio/CSE6550Spring2023Team3/files/10963715/Software.Requirement.Specification.docx.1.1.3.docx)
+
 | Date  | Updates |
 | ------------- | ------------- |
+| 13th March, 2023 |  ● Updated system interface <br>| 
 | 6th March, 2023 | ● Updated User Interface <br> ● Updated UML figures 
 | 27th Feb, 2023 | Updated product scope <br> Software interfaces <br> ● Unity <br> ●	Visual Studio <br>	●	C# and .Net <br> Updated user classes and characteristics.|
 | 20th Feb ,2023  | ●	Finished the overall description Portion of the SRS and some of the External Interface portion of the SRS.|
