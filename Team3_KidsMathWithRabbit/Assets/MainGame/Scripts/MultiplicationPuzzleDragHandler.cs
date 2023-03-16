@@ -4,19 +4,33 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class MultiplicationPuzzleDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public List<TMP_Text> solutions = new List<TMP_Text>();
+    public List<Transform> solPos = new List<Transform>();
+    public GameObject butt;
+    bool[] arr = {false, false, false, false, false};  
 
-    public Transform answerSlot;
+    //public Transform answerSlot;
     public float desiredDuration = 10.0f;
     float elapsedTime;
-    bool isOnStart = false;
-    public TMP_Text answerText;
+    bool isCorrect = false;
+    bool isOnStart= false;
+    bool isDLO = false;
+    bool isDMO = false;
+    bool isDRO = false;
+    bool isDEO = false;
+    bool isDSO = false;
+    //public TMP_Text answerText;
     public TMP_Text currentText;
-    public RectTransform answerTextPosition;
-    public float d;
+    //public RectTransform answerTextPosition;
+    public float dlo;
+    public float dmo;
+    public float dro;
+    public float deo;
+    public float dso;
     //public RectTransform currentTextPosition;
 
     public void Start()
@@ -27,10 +41,8 @@ public class MultiplicationPuzzleDragHandler : MonoBehaviour, IBeginDragHandler,
     public void OnBeginDrag(PointerEventData eventData)
     {
         isOnStart = false;
+        setStates();
         elapsedTime = 0;
-        //buttonsBeingDragged = gameObject;
-        //startPosition = transform.position;
-        //startParent = transform.parent;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -40,17 +52,83 @@ public class MultiplicationPuzzleDragHandler : MonoBehaviour, IBeginDragHandler,
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        //buttonsBeingDragged = null;
-        if (isCorrectSlot() == false)
+        dlo = Vector3.Distance(solutions[0].transform.position, transform.position);
+        dmo = Vector3.Distance(solutions[1].transform.position, transform.position);
+        dro = Vector3.Distance(solutions[2].transform.position, transform.position);
+        deo = Vector3.Distance(solutions[3].transform.position, transform.position);
+        dso = Vector3.Distance(solutions[4].transform.position, transform.position);
+
+
+        if(dlo < 40)
+        {
+            isCorrect = isCorrectSlot(0);
+        }
+        else if (dmo < 40)
+        {
+            isCorrect = isCorrectSlot(1);
+        }
+        else if (dro < 40)
+        {
+            isCorrect = isCorrectSlot(2);
+        }
+        else if (deo < 40)
+        {
+            isCorrect = isCorrectSlot(3);
+        }
+        else if (dso < 40)
+        {
+            isCorrect = isCorrectSlot(4);
+        }
+        else
+        {
+            isCorrectSlot(5);
+        }
+
+        ////buttonsBeingDragged = null;
+        if (isCorrect == false)
         {
             isOnStart = true;
         }
         else
         {
-            if (answerText.text == currentText.text)
+            if (isDLO && currentText.text == solutions[0].text)
             {
-                transform.position = answerSlot.position;
+                transform.position = solPos[0].position;
                 isOnStart = false;
+                setStates();
+                arr[0] = true;
+                Debug.Log("Correct");
+            }
+            else if (isDMO && currentText.text == solutions[1].text)
+            {
+                transform.position = solPos[1].position;
+                isOnStart = false;
+                setStates();
+                arr[1] = true;
+                Debug.Log("Correct");
+            }
+            else if (isDRO && currentText.text == solutions[2].text)
+            {
+                transform.position = solPos[2].position;
+                isOnStart = false;
+                setStates();
+                arr[2] = true;
+                Debug.Log("Correct");
+            }
+            else if (isDEO && currentText.text == solutions[3].text)
+            {
+                transform.position = solPos[3].position;
+                isOnStart = false;
+                setStates();
+                arr[3] = true;
+                Debug.Log("Correct");
+            }
+            else if (isDSO && currentText.text == solutions[4].text)
+            {
+                transform.position = solPos[4].position;
+                isOnStart = false;
+                setStates();
+                arr[4] = true;
                 Debug.Log("Correct");
             }
             else
@@ -59,16 +137,10 @@ public class MultiplicationPuzzleDragHandler : MonoBehaviour, IBeginDragHandler,
             }
 
         }
-
-        //if (transform.parent != startParent)
-        //{
-        //    transform.position = startPosition;
-        //}
     }
 
     public void Update()
     {
-        d = Vector3.Distance(answerTextPosition.position, transform.position);
 
         if (isOnStart == true)
         {
@@ -77,17 +149,60 @@ public class MultiplicationPuzzleDragHandler : MonoBehaviour, IBeginDragHandler,
             transform.position = Vector3.Lerp(transform.position, transform.parent.position, percentageComplete);
         }
 
-
+        foreach(bool isCorrect in arr)
+        {
+            if(isCorrect == false)
+            {
+                break;
+            }
+            butt.SetActive(true);
+        }
 
     }
 
-    public bool isCorrectSlot()
+    //public void GetPosition(int sol)
+    //{
+        
+    //}
+
+
+    public bool isCorrectSlot(int sol)
     {
-        if (d < 60)
+        if (sol == 0)
         {
+            isDLO= true;
+            return true;
+        }
+        if (sol == 1)
+        {
+            isDMO = true;
+            return true;
+        }
+        if (sol == 2)
+        {
+            isDRO = true;
+            return true;
+        }
+        if (sol == 3)
+        {
+            isDEO = true;
+            return true;
+        }
+        if (sol == 4)
+        {
+            isDSO = true;
             return true;
         }
 
         return false;
+    }
+
+    void setStates()
+    {
+        isDLO = false;
+        isDMO = false;
+        isDRO = false;
+        isDEO = false;
+        isDSO = false;
     }
 }
