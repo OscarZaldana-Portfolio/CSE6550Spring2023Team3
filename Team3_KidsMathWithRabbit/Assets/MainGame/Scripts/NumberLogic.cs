@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class NumberLogic : MonoBehaviour
 {
+    public UnityEvent onSet;
     public TMP_Text rightOperandText;
     public TMP_Text leftOperandText;
     public TMP_Text solutionText;
@@ -14,6 +16,8 @@ public class NumberLogic : MonoBehaviour
     public TMP_Text lowerChoiceText;
     public GameObject leftQuestionSectionPanel;
     public RectTransform leftQuestionRectTransform;
+    public GameObject nextButton;
+    public GameObject UIButton;
 
     int level = 1;
     int leftOperand = 0;
@@ -28,6 +32,13 @@ public class NumberLogic : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
+    {
+        setNumbers();
+
+    }
+
+
+    public void setNumbers()
     {
         leftOperand = Random.Range(1, 6);
         rightOperand = Random.Range(1, 6);
@@ -87,13 +98,32 @@ public class NumberLogic : MonoBehaviour
         middleChoiceText.text = middleChoiceNumber.ToString();
         lowerChoiceText.text = lowerChoiceNumber.ToString();
         solutionText.text = answer.ToString();
-
+    }
+    
+    public void reset()
+    {
+        onSet.Invoke();
+        setNumbers();
+        NextButtonOff();
+        UIButtonOn();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void NextButtonON()
     {
+        nextButton.SetActive(true);
+    }
+    public void NextButtonOff()
+    {
+        nextButton.SetActive(false);
+    }
 
+    public void UIButtonOn()
+    {
+        UIButton.SetActive(true);
+    }
+    public void UIButtonOff()
+    {
+        UIButton.SetActive(false);
     }
 }
 

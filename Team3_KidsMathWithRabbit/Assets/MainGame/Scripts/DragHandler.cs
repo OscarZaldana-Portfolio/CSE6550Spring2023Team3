@@ -4,12 +4,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    //public static GameObject buttonsBeingDragged;
-    //public Vector3 startPosition;
-    //public Transform startParent;
+    public UnityEvent onAnswer;
     public Transform answerSlot;
     public float desiredDuration = 10.0f;
     float elapsedTime;
@@ -52,7 +51,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             {
                 transform.position = answerSlot.position;
                 isOnStart = false;
-                Debug.Log("Correct");
+                onAnswer.Invoke();
             }
             else
             {
@@ -60,11 +59,6 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             }
 
         }
-
-        //if (transform.parent != startParent)
-        //{
-        //    transform.position = startPosition;
-        //}
     }
 
     public void Update()
@@ -90,5 +84,10 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         }
 
         return false;
+    }
+
+    public void setIsOnStart()
+    {
+        isOnStart = true;
     }
 }
