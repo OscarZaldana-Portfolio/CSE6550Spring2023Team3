@@ -5,12 +5,13 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.Events;
 
 public class MultiplicationPuzzleDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public List<TMP_Text> solutions = new List<TMP_Text>();
     public List<Transform> solPos = new List<Transform>();
-    public GameObject butt;
+    public UnityEvent onNext;
     bool[] arr = {false, false, false, false, false};  
 
     //public Transform answerSlot;
@@ -91,51 +92,68 @@ public class MultiplicationPuzzleDragHandler : MonoBehaviour, IBeginDragHandler,
         }
         else
         {
-            if (isDLO && currentText.text == solutions[0].text)
+            if (isDLO && (currentText.text == solutions[0].text))
             {
                 transform.position = solPos[0].position;
                 isOnStart = false;
                 setStates();
                 arr[0] = true;
-                Debug.Log("Correct");
+                //Debug.Log("Correct");
             }
-            else if (isDMO && currentText.text == solutions[1].text)
+            else if (isDMO && (currentText.text == solutions[1].text))
             {
                 transform.position = solPos[1].position;
                 isOnStart = false;
                 setStates();
                 arr[1] = true;
-                Debug.Log("Correct");
+                //Debug.Log("Correct");
             }
-            else if (isDRO && currentText.text == solutions[2].text)
+            else if (isDRO && (currentText.text == solutions[2].text))
             {
                 transform.position = solPos[2].position;
                 isOnStart = false;
                 setStates();
                 arr[2] = true;
-                Debug.Log("Correct");
+                //Debug.Log("Correct");
             }
-            else if (isDEO && currentText.text == solutions[3].text)
+            else if (isDEO && (currentText.text == solutions[3].text))
             {
                 transform.position = solPos[3].position;
                 isOnStart = false;
                 setStates();
                 arr[3] = true;
-                Debug.Log("Correct");
+                //Debug.Log("Correct");
             }
-            else if (isDSO && currentText.text == solutions[4].text)
+            else if (isDSO && (currentText.text == solutions[4].text))
             {
                 transform.position = solPos[4].position;
                 isOnStart = false;
                 setStates();
                 arr[4] = true;
-                Debug.Log("Correct");
+                //Debug.Log("Correct");
             }
             else
             {
                 isOnStart = true;
             }
 
+        }
+
+        foreach (bool arrCorrect in arr)
+        {
+            if (arrCorrect == false)
+            {
+                break;
+            }
+            onNext.Invoke();
+            setStates();
+            Debug.Log("correct");
+            isCorrect = false;
+            arr[0] = false;
+            arr[1] = false;
+            arr[2] = false;
+            arr[3] = false;
+            arr[4] = false;
         }
     }
 
@@ -148,23 +166,7 @@ public class MultiplicationPuzzleDragHandler : MonoBehaviour, IBeginDragHandler,
             float percentageComplete = elapsedTime / desiredDuration;
             transform.position = Vector3.Lerp(transform.position, transform.parent.position, percentageComplete);
         }
-
-        foreach(bool isCorrect in arr)
-        {
-            if(isCorrect == false)
-            {
-                break;
-            }
-            butt.SetActive(true);
-        }
-
     }
-
-    //public void GetPosition(int sol)
-    //{
-        
-    //}
-
 
     public bool isCorrectSlot(int sol)
     {
@@ -204,5 +206,10 @@ public class MultiplicationPuzzleDragHandler : MonoBehaviour, IBeginDragHandler,
         isDRO = false;
         isDEO = false;
         isDSO = false;
+    }
+
+    public void setIsOnStart()
+    {
+        isOnStart = true;
     }
 }

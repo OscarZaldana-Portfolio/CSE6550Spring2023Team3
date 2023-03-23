@@ -8,15 +8,21 @@ using TMPro;
 public class MultiplicationPuzzleLevelManager : MonoBehaviour
 {
     public UnityEvent onSolved;
+    public GameObject nextButton;
+    public GameObject UIButton;
+    public GameObject UICanvas;
     public List<TMP_Text> solutions_Text = new List<TMP_Text>();
     List<TMP_Text> solutions_Holder = new List<TMP_Text>();
     public List<TMP_Text> keys_Text  = new List<TMP_Text>();
     List<TMP_Text> keys_Holder = new List<TMP_Text>();
 
+    //public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         CreateText();
+        //UICanvas.GetComponent<Animator>().Play("QuestionsTransition");
     }
 
     // Update is called once per frame
@@ -68,5 +74,35 @@ public class MultiplicationPuzzleLevelManager : MonoBehaviour
             a[i].text = b[i].text;
         }
     }
+
+    public void Reset()
+    {
+        CreateText();
+        onSolved.Invoke();
+        ButtonsOff();
+        NextButtonOff();
+        //UICanvas.GetComponent<Animator>().Play("QuestionsTransition");
+    }
+
+    public void NextButtonOn()
+    {
+        nextButton.SetActive(true);
+    }
+
+    public void NextButtonOff()
+    {
+        nextButton.SetActive(false);
+    }
+
+    public void ButtonsOff()
+    {
+        UIButton.SetActive(false);
+    }
+
+    public void ButtonsOn()
+    {
+        UIButton.SetActive(true);
+    }
+
 
 }
