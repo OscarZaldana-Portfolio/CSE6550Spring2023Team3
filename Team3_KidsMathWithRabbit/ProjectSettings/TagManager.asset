@@ -48,9 +48,12 @@ TagManager:
   - name: BackGround
     uniqueID: 2141126775
     locked: 0
-  - name: LeafParticalSystem
+  - name: LeafBehindParticalSystem
     uniqueID: 4121762843
     locked: 0
   - name: Buttons
     uniqueID: 3440416641
+    locked: 0
+  - name: LeafOverParticalSystem
+    uniqueID: 3297636651
     locked: 0
