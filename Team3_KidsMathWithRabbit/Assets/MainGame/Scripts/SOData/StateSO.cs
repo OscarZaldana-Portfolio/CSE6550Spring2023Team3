@@ -7,8 +7,16 @@ public class StateSO : ScriptableObject
 {
     [SerializeField]
     private GameManager.GameStates _gameState;
+    private GameManager.GameStates _nextGameState;
 
-    public GameManager.GameStates States
+
+    public GameManager.GameStates CurrentState
+    {
+        get { return _gameState; }
+        set { _gameState = value; }
+    }
+
+    public GameManager.GameStates NextState
     {
         get { return _gameState; }
         set { _gameState = value; }

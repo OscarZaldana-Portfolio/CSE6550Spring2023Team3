@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public SoundList library;
+    public AudioSource soundFXSource;
+    public AudioSource musicSource;
 
-    // Update is called once per frame
-    void Update()
+
+    public void PlaySound2D(string soundName)
     {
-        
+        //sfx2DSource.pitch = Random.Range(lowPitch, 1);
+        soundFXSource.PlayOneShot(library.GetClipFromName(soundName), 0.5f);
     }
 }

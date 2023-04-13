@@ -29,11 +29,5 @@ public class UIManager : MonoBehaviour
         //{
 
         //}
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            
-            //GameManager.Instance.gameStates = GameManager.GameStates.Transition;
-        }
     }
 }
