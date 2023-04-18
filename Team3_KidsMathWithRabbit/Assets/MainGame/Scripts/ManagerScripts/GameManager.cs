@@ -11,15 +11,13 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public AudioManager AudioManager { get; private set; }
     public UIManager UIManager { get; private set; }
-    public int playerHealth = 10;
 
     [SerializeField]
     private StateSO stateSO;
     public float transitionTime = 10.0f;
-    private GameStates prevState;
+    string next;
 
-    public enum GameStates
-    {
+    public enum GameStates{
         MainMenu,
         MultiplicationPuzzle,
         MultiplicationFun,
@@ -33,9 +31,6 @@ public class GameManager : MonoBehaviour
     public UnityEvent onMultiplicationFunTransition;
     public UnityEvent onMultiplicationQuizTransition;
     public UnityEvent onMultiplicationPracticeTransition;
-    public UnityEvent onTransition;
-
-
 
     private void Awake(){
         //Check to see if there is another existance of this object
@@ -43,62 +38,60 @@ public class GameManager : MonoBehaviour
             Destroy(this);
             return;
         }
+
         Instance = this;
         AudioManager = GetComponentInChildren<AudioManager>();
         UIManager = GetComponentInChildren<UIManager>();
 
-
-
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
+            stateSO.PrevState = GameStates.MainMenu;
             stateSO.CurrentState = GameStates.MainMenu;
+            stateSO.NextState = GameStates.MainMenu;
         }
-
 
         if(stateSO == null)
         {
+            stateSO.PrevState = GameStates.MainMenu;
             stateSO.CurrentState = GameStates.MainMenu;
+            stateSO.NextState = GameStates.MainMenu;
         }
-        prevState = stateSO.CurrentState;
 
         //DontDestroyOnLoad(this.gameObject);
     }
 
-    public void Start()
-    {
-        Debug.Log(stateSO.CurrentState);
-    }
-
     private void Update()
     {
-        if(prevState != stateSO.CurrentState)
+        if(stateSO.CurrentState == GameStates.Transition)
         {
-            if(stateSO.CurrentState == GameStates.MainMenu)
-            {
-                MainMenuTransition();
-            }
-            else if (stateSO.CurrentState == GameStates.MultiplicationPuzzle)
-            {
-                MultiplicationPuzzleTransition();
-            }
-            else if (stateSO.CurrentState == GameStates.MultiplicationFun)
-            {
-                MultiplicationFunTransition();
-            }
-            else if (stateSO.CurrentState == GameStates.MultiplicationQuiz)
-            {
-                MultiplicationQuizTransition();
-            }
-            else if (stateSO.CurrentState == GameStates.MultiplicationPractice)
-            {
-                MultiplicationPracticeTransition();
-            }
-            else if (stateSO.CurrentState == GameStates.Transition)
-            {
-                MultiplicationPracticeTransition();
-            }
-            prevState = stateSO.CurrentState;
+            StartCoroutine(Transition());
         }
+
+
+
+        //if(stateSO.CurrentState != stateSO.NextState)
+        //{
+        //    if(stateSO.CurrentState == GameStates.MainMenu)
+        //    {
+        //        MainMenuTransition();
+        //    }
+        //    else if (stateSO.CurrentState == GameStates.MultiplicationPuzzle)
+        //    {
+        //        MultiplicationPuzzleTransition();
+        //    }
+        //    else if (stateSO.CurrentState == GameStates.MultiplicationFun)
+        //    {
+        //        MultiplicationFunTransition();
+        //    }
+        //    else if (stateSO.CurrentState == GameStates.MultiplicationQuiz)
+        //    {
+        //        MultiplicationQuizTransition();
+        //    }
+        //    else if (stateSO.CurrentState == GameStates.MultiplicationPractice)
+        //    {
+        //        MultiplicationPracticeTransition();
+        //    }
+        //}
     }
 
     void MainMenuTransition()
@@ -126,35 +119,43 @@ public class GameManager : MonoBehaviour
         onMultiplicationPracticeTransition.Invoke();
     }
 
-
+    private IEnumerator Transition()
+    {
+        yield return new WaitForSeconds(transitionTime);
+        stateSO.CurrentState = stateSO.NextState;
+        SceneManager.LoadScene(next);
+    }
 
     public void changeState(string state)
     {
-        if(state == "MainMenu")
-        {
+        if(state == "MainMenu"){
+            next = state;
             stateSO.CurrentState = GameStates.Transition;
             stateSO.NextState = GameStates.MainMenu;
         }
-        else if(state == "MultiplicationPuzzle"){
+        else if(state == "Multiplication Puzzle"){
+            next = state;
             stateSO.CurrentState = GameStates.Transition;
             stateSO.NextState = GameStates.MultiplicationPuzzle;
         }
-        else if(state == "MultiplicationFun"){
+        else if(state == "Multiplication Fun"){
+            next = state;
             stateSO.CurrentState = GameStates.Transition;
             stateSO.NextState = GameStates.MultiplicationFun;
         }
-        else if(state == "MultiplicationQuiz"){
+        else if(state == "Multiplication Quiz"){
+            next = state;
             stateSO.CurrentState = GameStates.Transition;
             stateSO.NextState = GameStates.MultiplicationQuiz;
         }
-        else if(state == "MultiplicationPractice"){
+        else if(state == "Multiplication Practice"){
+            next = state;
             stateSO.CurrentState = GameStates.Transition;
             stateSO.NextState = GameStates.MultiplicationPractice;
         }
     }
 
-    public GameStates getState()
-    {
+    public GameStates getCurrentState(){
         return stateSO.CurrentState;
     }
 
