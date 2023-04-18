@@ -31,6 +31,6 @@ public class AnimationController : MonoBehaviour
         anim.Play("carrot");
 
         // Return to the idle position
-        anim.CrossFade("Idle", 0.5f);
+        anim.CrossFade("Idle", 1.0f);
     }
 }
