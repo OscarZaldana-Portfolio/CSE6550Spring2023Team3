@@ -1,0 +1,2525 @@
+fileFormatVersion: 2
+guid: e70f101b3c9f63a4a9925cc478880544
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 10792
+        width: 303
+        height: 728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd27dbb76ee20e4994ec9a06973c1e6
+      internalID: -1973259352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 10792
+        width: 304
+        height: 728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c87e4b721af714e89c48daaa5c362c
+      internalID: 1438704581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 10792
+        width: 303
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9238d1dffe868fd45ae5336cf0dec5ef
+      internalID: 50290212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 10792
+        width: 304
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c789603689b324ca138c950cccaa32
+      internalID: 2071448667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 10792
+        width: 320
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6440fac98f05abf4888801a33968c2ca
+      internalID: 747031149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 10792
+        width: 320
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773a27cad1c459249b33d62280925fe7
+      internalID: 515223923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 10792
+        width: 321
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9f7db6663754d4a827ea9b1a420228
+      internalID: -843865874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 10072
+        width: 325
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7aa896d9d286245b67b9c353f495d6
+      internalID: 1775691317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 10072
+        width: 321
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f587b7c28abb54dae49ff7a20de8e6
+      internalID: 19549538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 10072
+        width: 334
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f8b6945e7f08444cbd54d07319c040f
+      internalID: -936022113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 10072
+        width: 338
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c93c56d8bf02b5429344f8093823edb
+      internalID: 449897699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 10072
+        width: 332
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce224566da33b4246a55659c88dee00a
+      internalID: 1728443127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 10072
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a00a2c9db2f5a2489637636eb52d247
+      internalID: 906394585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 10072
+        width: 332
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6a8c308a6d68646b99af32ca74ba26
+      internalID: 1375792540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 9352
+        width: 343
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2216418789e4ae24784c48222d8bf5fb
+      internalID: -1529582261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 9352
+        width: 340
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d233194adaa142f40ab34cebd87ed869
+      internalID: 217573033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 9352
+        width: 340
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50129c2ca043faf44b6ff27dabd5009b
+      internalID: -296466683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 9352
+        width: 343
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643ce6f8b11ea1d4fa2f55ad8b6f6b85
+      internalID: 1974450974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 9352
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a194e14da1d95b543b5c3a3a2e418dba
+      internalID: -1321328835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 9352
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59016617687e80541b73929fe300598c
+      internalID: 982112236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 9352
+        width: 332
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8100a8af6275744fab279eb2dd6b1ca
+      internalID: -557190785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 8632
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c47bcede4c4dd44aa2bc894e9bdf36
+      internalID: 180020633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 8632
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beddce179cb8f504fa19908f6d8c89ff
+      internalID: 1659466139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 8632
+        width: 334
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3b8a3a8755b4448999f0c9650547b4
+      internalID: -1106435427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 8632
+        width: 321
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5515464ca144547b084455e7760f20
+      internalID: 1587333306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 8632
+        width: 315
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9a440223323d24787fbba0e337943f
+      internalID: 276473265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 8632
+        width: 320
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3fa3334f63cbc439f265f531b47e7d
+      internalID: -287803492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 8632
+        width: 315
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cdf50546d246c64d80b03298fb5f5fa
+      internalID: 909271122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 7912
+        width: 320
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a3d22350e25184585b8cc698438258
+      internalID: 1376037101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 7912
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c29cd2bb98fee4abb935e2e7188018
+      internalID: 1080689524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 7912
+        width: 334
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717157d06ceb7a446a9998a9896eda27
+      internalID: 78326267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 7912
+        width: 338
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b60cf41980862f4ab9ef442cbd87e3d
+      internalID: 1031239858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 7912
+        width: 332
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34df24a5843117540b112ad3b5793e19
+      internalID: 1105372524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 7912
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d52db1dd3c4dfd4cab34545ff87eabf
+      internalID: -1950440284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 7912
+        width: 332
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5ff79ef0eb11543b7dde5d87a49fdb
+      internalID: 426531195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 7192
+        width: 343
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69dd11edfcb0f654999bc06e9a44699c
+      internalID: 1235628189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 7192
+        width: 340
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57acbaa1cc9b354d804d7acbaf9f246
+      internalID: -1382823691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 7192
+        width: 340
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd55166ee78019b46b10ffec7cd59086
+      internalID: 1376620504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 7192
+        width: 343
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89268ed6c3332b42b5a313a47726f47
+      internalID: -739501777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 7192
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98c977acfa66f44284e4413091bb808
+      internalID: -6659849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 7192
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4d72c3bf8f59d4d9f0323ba848c742
+      internalID: -728493958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 7192
+        width: 332
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0d077463a4da745a38de2be8561d4f
+      internalID: 1279900428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 6472
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a23890ba56b32843b57456b94f0035e
+      internalID: -1709547124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 6472
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29f711e4f79572438dbd2efbfff8b97
+      internalID: 2058454558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 6472
+        width: 334
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84c3df29cf73e54990d555b9c4e1cb6
+      internalID: -1437078420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 6472
+        width: 321
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85cedcde411679478fe00b92562134d
+      internalID: 1981839108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 6472
+        width: 320
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975c5ae9dad7c20438cbfed8fda86052
+      internalID: -1808758864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 6472
+        width: 320
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174f839f8dadade4e95a6db49f50c648
+      internalID: 844252362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 6472
+        width: 321
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890bb8cedae07bb46add5a4bbeeb7d49
+      internalID: -1328762976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 5752
+        width: 325
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843d85f3ec5a88243b1f85f895854744
+      internalID: -168538336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 5752
+        width: 304
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbb33c1ac70dbe4b94816349b4896ef
+      internalID: 29188883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 5752
+        width: 303
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd6cdc3b1103754d965841176953630
+      internalID: 1578474899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 5752
+        width: 304
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b05378505878ea46817200aee8763b1
+      internalID: 1430421822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 5752
+        width: 303
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ea1057522b5dc41a99ea2787437467
+      internalID: 1123671432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 5752
+        width: 303
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0c1030c97a2aa4eb8246db9dd773d3
+      internalID: -1803892960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 5752
+        width: 321
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae3f4ce6229cb34ea75e9ef6b3f55c9
+      internalID: -452773463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 5032
+        width: 325
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227b0e3727165ce4fb1e61fdf8363927
+      internalID: 1489682596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 5032
+        width: 321
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3efc1bc22cbf76e46837aeaa789b30db
+      internalID: -1448647332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 5032
+        width: 323
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646b5ed17d767a34e83aad872e645371
+      internalID: 356917613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 5032
+        width: 321
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71a2573f4a3d7b46a6119669262fc6e
+      internalID: 1171287793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 5032
+        width: 332
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1e7b694157d4b4b9d347c513f6a80a
+      internalID: -368673347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_61
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 5032
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef38c85788de644784875b7c3b53531
+      internalID: -766194424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_62
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 5032
+        width: 332
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f3d524cfd425d48890e2957c2cc0b9
+      internalID: -1918151468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_63
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 4312
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977fe8856ed2f454da5cbcb577ec8979
+      internalID: -1745475659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_64
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 4312
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53173a3f859c1554fbe2cc60e35d2e2c
+      internalID: -1981677732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_65
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 4312
+        width: 340
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3beb531156033bb469da3a412a53719a
+      internalID: 1819193742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_66
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 4312
+        width: 343
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864a1cb803a993e49a8792172b6c18ba
+      internalID: 1624389071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_67
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 4312
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4e4517512650f429f1ecb3bbd1ee3a
+      internalID: -447641435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_68
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 4312
+        width: 343
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f428c90f8a74e514c8762547e00ba816
+      internalID: -372405175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_69
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 4312
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f8af55cf14be84989a20385d42de65
+      internalID: -2087126840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_70
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 3592
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d861016bcd567504ab4fe753cdf2b98d
+      internalID: 1629053715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_71
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 3592
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c892fac036b6fe45a2d461a439ea594
+      internalID: 1377441071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_72
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 3592
+        width: 334
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a6922d16cbd83439153e7dd0d7688a
+      internalID: -1561364230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_73
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 3592
+        width: 338
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518eb806bed235f49b1b91bf1401e638
+      internalID: -1743877426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_74
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 3592
+        width: 332
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b82db28746850c44a9028fb666254f97
+      internalID: -1635530089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_75
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 3592
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c96a495f79f0f4094da9552ce9ef26
+      internalID: 686495517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_76
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 3592
+        width: 315
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83984d01397b88d4994e101cf7513307
+      internalID: -1121645919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_77
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2872
+        width: 320
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eee4ec8e22197440b1ab85b0bc93e83
+      internalID: -955678666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_78
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 2872
+        width: 320
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f664329a34cf45499c0b1b55c934c15
+      internalID: 601681617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_79
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 2872
+        width: 318
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924d881b6a293d9489132d1652c86517
+      internalID: 603216614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_80
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 2872
+        width: 321
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76148ca535e2d9f47b24117e4d858831
+      internalID: 556905255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_81
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 2872
+        width: 332
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad7cf28c6117484c90be2cd49ff83a5
+      internalID: 206504329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_82
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 2872
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6450fa989e63b5f428263ca9148036fc
+      internalID: 2119420964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_83
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 2872
+        width: 332
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12feedb73de8b5544a9fda1a78460023
+      internalID: 76323549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_84
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2152
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f870d4bf117dde248927c23261834d64
+      internalID: 1689954204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_85
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 2152
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb71b8f151de66f458c4f60d39e0f6f4
+      internalID: -656019588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_86
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 2152
+        width: 334
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6988592ed8ec44d904e154530da719
+      internalID: -250442549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_87
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 2152
+        width: 343
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d669185041a2c4ba814d5206247807
+      internalID: 550615248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_88
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 2152
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0f691be24e0754da38f03f8b30c668
+      internalID: -584095780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_89
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 2152
+        width: 343
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141798bffa9bc6846bc41a61c80237de
+      internalID: 1010089040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_90
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 2152
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94f631218168a843b81f888fc015ea4
+      internalID: 418903047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_91
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1432
+        width: 343
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540260c60fc4fbd4fbe5f3148e3ad527
+      internalID: -1889150222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_92
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1432
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea6ae841c310364e9a4f2be0c5e37ca
+      internalID: 924589950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_93
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 1432
+        width: 334
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfc3c8a82af5c24d82f35ad26d42796
+      internalID: 709685711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_94
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 1432
+        width: 338
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27983948c4dbbe645909bed7ea7125e4
+      internalID: -250466383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_95
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 1432
+        width: 332
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c7d568e36b65a4fa889f3259f96dd2
+      internalID: -1224534137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_96
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 1432
+        width: 337
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1096e1903775906499ac47624a095d8b
+      internalID: 1643962455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_97
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 1432
+        width: 321
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe22ceb3515af34d89546c71aa84cce
+      internalID: -177896787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_98
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 712
+        width: 325
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c79c6c13f99cc469238d93061334c2
+      internalID: 79985075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_99
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 712
+        width: 321
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107448290e471984ca4d80698c5a8580
+      internalID: -705510103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_100
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 712
+        width: 323
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42d34840ad238b49856c5e58e5a7792
+      internalID: 1337736932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_101
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 712
+        width: 321
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744db20dba1189a49936deaffaf33596
+      internalID: 1297119610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_102
+      rect:
+        serializedVersion: 2
+        x: 5622
+        y: 712
+        width: 303
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4607c2bae1f95d145bb33e8f65718d41
+      internalID: 1048054301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_103
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 712
+        width: 303
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b3c02612c3c3a43b0987a7c71a2150
+      internalID: -996330898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_104
+      rect:
+        serializedVersion: 2
+        x: 8181
+        y: 712
+        width: 304
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff113bd0b92122540bbee3fbcfb4a686
+      internalID: 1703759844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_105
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 0
+        width: 303
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0263fa80d9fa1fe4eba10388da545454
+      internalID: -578308650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BugsyHellospritesheet_106
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 0
+        width: 304
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bfaab1a29325914fbf0ced262dceb9b
+      internalID: 1053301377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 563be5c2f9e375e468d346ceac2055f8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BugsyHellospritesheet_45: 1981839108
+      BugsyHellospritesheet_100: 1337736932
+      BugsyHellospritesheet_28: 1376037101
+      BugsyHellospritesheet_73: -1743877426
+      BugsyHellospritesheet_87: 550615248
+      BugsyHellospritesheet_42: -1709547124
+      BugsyHellospritesheet_19: 982112236
+      BugsyHellospritesheet_59: 1171287793
+      BugsyHellospritesheet_75: 686495517
+      BugsyHellospritesheet_60: -368673347
+      BugsyHellospritesheet_62: -1918151468
+      BugsyHellospritesheet_106: 1053301377
+      BugsyHellospritesheet_96: 1643962455
+      BugsyHellospritesheet_76: -1121645919
+      BugsyHellospritesheet_103: -996330898
+      BugsyHellospritesheet_39: -6659849
+      BugsyHellospritesheet_99: -705510103
+      BugsyHellospritesheet_89: 1010089040
+      BugsyHellospritesheet_31: 1031239858
+      BugsyHellospritesheet_55: -452773463
+      BugsyHellospritesheet_44: -1437078420
+      BugsyHellospritesheet_26: -287803492
+      BugsyHellospritesheet_53: 1123671432
+      BugsyHellospritesheet_90: 418903047
+      BugsyHellospritesheet_69: -2087126840
+      BugsyHellospritesheet_49: -168538336
+      BugsyHellospritesheet_20: -557190785
+      BugsyHellospritesheet_13: 1375792540
+      BugsyHellospritesheet_9: -936022113
+      BugsyHellospritesheet_79: 603216614
+      BugsyHellospritesheet_81: 206504329
+      BugsyHellospritesheet_50: 29188883
+      BugsyHellospritesheet_104: 1703759844
+      BugsyHellospritesheet_11: 1728443127
+      BugsyHellospritesheet_22: 1659466139
+      BugsyHellospritesheet_25: 276473265
+      BugsyHellospritesheet_95: -1224534137
+      BugsyHellospritesheet_37: 1376620504
+      BugsyHellospritesheet_43: 2058454558
+      BugsyHellospritesheet_8: 19549538
+      BugsyHellospritesheet_66: 1624389071
+      BugsyHellospritesheet_98: 79985075
+      BugsyHellospritesheet_64: -1981677732
+      BugsyHellospritesheet_27: 909271122
+      BugsyHellospritesheet_24: 1587333306
+      BugsyHellospritesheet_68: -372405175
+      BugsyHellospritesheet_56: 1489682596
+      BugsyHellospritesheet_88: -584095780
+      BugsyHellospritesheet_14: -1529582261
+      BugsyHellospritesheet_47: 844252362
+      BugsyHellospritesheet_102: 1048054301
+      BugsyHellospritesheet_92: 924589950
+      BugsyHellospritesheet_16: -296466683
+      BugsyHellospritesheet_65: 1819193742
+      BugsyHellospritesheet_93: 709685711
+      BugsyHellospritesheet_23: -1106435427
+      BugsyHellospritesheet_86: -250442549
+      BugsyHellospritesheet_46: -1808758864
+      BugsyHellospritesheet_97: -177896787
+      BugsyHellospritesheet_5: 515223923
+      BugsyHellospritesheet_41: 1279900428
+      BugsyHellospritesheet_12: 906394585
+      BugsyHellospritesheet_91: -1889150222
+      BugsyHellospritesheet_71: 1377441071
+      BugsyHellospritesheet_101: 1297119610
+      BugsyHellospritesheet_94: -250466383
+      BugsyHellospritesheet_85: -656019588
+      BugsyHellospritesheet_40: -728493958
+      BugsyHellospritesheet_18: -1321328835
+      BugsyHellospritesheet_52: 1430421822
+      BugsyHellospritesheet_57: -1448647332
+      BugsyHellospritesheet_34: 426531195
+      BugsyHellospritesheet_35: 1235628189
+      BugsyHellospritesheet_21: 180020633
+      BugsyHellospritesheet_6: -843865874
+      BugsyHellospritesheet_2: 50290212
+      BugsyHellospritesheet_38: -739501777
+      BugsyHellospritesheet_77: -955678666
+      BugsyHellospritesheet_61: -766194424
+      BugsyHellospritesheet_29: 1080689524
+      BugsyHellospritesheet_15: 217573033
+      BugsyHellospritesheet_84: 1689954204
+      BugsyHellospritesheet_36: -1382823691
+      BugsyHellospritesheet_1: 1438704581
+      BugsyHellospritesheet_0: -1973259352
+      BugsyHellospritesheet_67: -447641435
+      BugsyHellospritesheet_58: 356917613
+      BugsyHellospritesheet_70: 1629053715
+      BugsyHellospritesheet_80: 556905255
+      BugsyHellospritesheet_33: -1950440284
+      BugsyHellospritesheet_82: 2119420964
+      BugsyHellospritesheet_32: 1105372524
+      BugsyHellospritesheet_3: 2071448667
+      BugsyHellospritesheet_10: 449897699
+      BugsyHellospritesheet_63: -1745475659
+      BugsyHellospritesheet_7: 1775691317
+      BugsyHellospritesheet_30: 78326267
+      BugsyHellospritesheet_72: -1561364230
+      BugsyHellospritesheet_78: 601681617
+      BugsyHellospritesheet_83: 76323549
+      BugsyHellospritesheet_105: -578308650
+      BugsyHellospritesheet_54: -1803892960
+      BugsyHellospritesheet_51: 1578474899
+      BugsyHellospritesheet_74: -1635530089
+      BugsyHellospritesheet_17: 1974450974
+      BugsyHellospritesheet_48: -1328762976
+      BugsyHellospritesheet_4: 747031149
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
