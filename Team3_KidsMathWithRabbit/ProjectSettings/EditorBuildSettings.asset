@@ -59,9 +59,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Srujana/Scenes/Shop.unity
     guid: dcd60a95db36a4c6b98b7513f236d68f
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Srujana/Scenes/Subracting Puzzle.unity
     guid: e85926a87b5f7476bb2646f6dda37d79
@@ -98,6 +95,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Dhanashree/Scenes/D_Multiplication Quiz.unity
     guid: 49848e2b156a76347a4ef0c9e205fcc8
+  - enabled: 1
+    path: Assets/MainGame/Scenes/IntroLoadScene.unity
+    guid: ff6141adc09d7c344bc82d0dc7fee9dc
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

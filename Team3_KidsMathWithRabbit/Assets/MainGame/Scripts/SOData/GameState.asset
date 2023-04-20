@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameState: 1
   _nextGameState: 1
+  _prevGameState: 0

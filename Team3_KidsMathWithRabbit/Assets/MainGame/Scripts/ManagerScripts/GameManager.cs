@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     string next;
 
     public enum GameStates{
+        Intro,
         MainMenu,
         MultiplicationPuzzle,
         MultiplicationFun,
@@ -43,18 +44,18 @@ public class GameManager : MonoBehaviour
         AudioManager = GetComponentInChildren<AudioManager>();
         UIManager = GetComponentInChildren<UIManager>();
 
-        if (SceneManager.GetActiveScene().name == "MainMenu")
+        if (SceneManager.GetActiveScene().name == "IntroLoadScene")
         {
-            stateSO.PrevState = GameStates.MainMenu;
-            stateSO.CurrentState = GameStates.MainMenu;
-            stateSO.NextState = GameStates.MainMenu;
+            stateSO.PrevState = GameStates.Intro;
+            stateSO.CurrentState = GameStates.Intro;
+            stateSO.NextState = GameStates.Intro;
         }
 
         if(stateSO == null)
         {
-            stateSO.PrevState = GameStates.MainMenu;
-            stateSO.CurrentState = GameStates.MainMenu;
-            stateSO.NextState = GameStates.MainMenu;
+            stateSO.PrevState = GameStates.Intro;
+            stateSO.CurrentState = GameStates.Intro;
+            stateSO.NextState = GameStates.Intro;
         }
 
         //DontDestroyOnLoad(this.gameObject);
@@ -129,6 +130,7 @@ public class GameManager : MonoBehaviour
     public void changeState(string state)
     {
         if(state == "MainMenu"){
+            stateSO.PrevState = stateSO.CurrentState;
             next = state;
             stateSO.CurrentState = GameStates.Transition;
             stateSO.NextState = GameStates.MainMenu;
@@ -157,6 +159,14 @@ public class GameManager : MonoBehaviour
 
     public GameStates getCurrentState(){
         return stateSO.CurrentState;
+    }
+    public GameStates getPreviousState()
+    {
+        return stateSO.PrevState;
+    }
+    public GameStates getNextState()
+    {
+        return stateSO.NextState;
     }
 
 

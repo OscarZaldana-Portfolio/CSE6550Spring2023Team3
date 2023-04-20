@@ -7,6 +7,7 @@ using TMPro;
 
 public class MultiplicationPuzzleLevelManager : MonoBehaviour
 {
+    public List<GameObject> img;
     public UnityEvent onSolved;
     public GameObject nextButton;
     public GameObject UIButton;
@@ -81,7 +82,7 @@ public class MultiplicationPuzzleLevelManager : MonoBehaviour
         onSolved.Invoke();
         ButtonsOff();
         NextButtonOff();
-        //UICanvas.GetComponent<Animator>().Play("QuestionsTransition");
+        UICanvas.GetComponent<Animator>().Play("SolvedTransition");
     }
 
     public void NextButtonOn()
@@ -96,12 +97,36 @@ public class MultiplicationPuzzleLevelManager : MonoBehaviour
 
     public void ButtonsOff()
     {
-        UIButton.SetActive(false);
+        foreach(GameObject obj in img)
+        {
+
+            if (obj.GetComponent<Image>() != null)
+            {
+                obj.GetComponent<Image>().enabled = false;
+            }
+            if (obj.GetComponent<TextMeshProUGUI>() != null)
+            {
+                obj.GetComponent<TextMeshProUGUI>().enabled = false;
+            }
+        }
+        //UIButton.SetActive(false);
     }
 
     public void ButtonsOn()
     {
-        UIButton.SetActive(true);
+        foreach (GameObject obj in img)
+        {
+
+            if (obj.GetComponent<Image>() != null)
+            {
+                obj.GetComponent<Image>().enabled = true;
+            }
+            if (obj.GetComponent<TextMeshProUGUI>() != null)
+            {
+                obj.GetComponent<TextMeshProUGUI>().enabled = true;
+            }
+        }
+        //UIButton.SetActive(true);
     }
 
 

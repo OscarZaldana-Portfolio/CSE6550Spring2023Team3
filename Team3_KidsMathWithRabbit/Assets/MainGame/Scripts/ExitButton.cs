@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class ExitButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void transitionPlay()
     {
-        
+        GameManager.Instance.AudioManager.musicSource.Pause();
+        GameManager.Instance.AudioManager.PlaySound("ProblemSolved", 0.4f);
+        StartCoroutine(Transition());
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private IEnumerator Transition()
     {
-        
+        yield return new WaitForSeconds(10.0f);
+        GameManager.Instance.AudioManager.musicSource.UnPause();
     }
 }

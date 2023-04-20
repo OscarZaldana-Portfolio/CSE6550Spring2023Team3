@@ -12,7 +12,9 @@ public class MultiplicationPuzzleDragHandler : MonoBehaviour, IBeginDragHandler,
     public List<TMP_Text> solutions = new List<TMP_Text>();
     public List<Transform> solPos = new List<Transform>();
     public UnityEvent onNext;
-    bool[] arr = {false, false, false, false, false};  
+    bool[] arr = {false, false, false, false, false};
+    public UnityEvent onCorrect;
+    public UnityEvent onInCorrect;
 
     //public Transform answerSlot;
     public float desiredDuration = 10.0f;
@@ -134,6 +136,7 @@ public class MultiplicationPuzzleDragHandler : MonoBehaviour, IBeginDragHandler,
             }
             else
             {
+                onInCorrect.Invoke();
                 isOnStart = true;
             }
 
@@ -162,6 +165,7 @@ public class MultiplicationPuzzleDragHandler : MonoBehaviour, IBeginDragHandler,
 
         if (isOnStart == true)
         {
+            
             elapsedTime += Time.deltaTime;
             float percentageComplete = elapsedTime / desiredDuration;
             transform.position = Vector3.Lerp(transform.position, transform.parent.position, percentageComplete);
@@ -172,30 +176,35 @@ public class MultiplicationPuzzleDragHandler : MonoBehaviour, IBeginDragHandler,
     {
         if (sol == 0)
         {
+            onCorrect.Invoke();
             isDLO= true;
             return true;
         }
         if (sol == 1)
         {
+            onCorrect.Invoke();
             isDMO = true;
             return true;
         }
         if (sol == 2)
         {
+            onCorrect.Invoke();
             isDRO = true;
             return true;
         }
         if (sol == 3)
         {
+            onCorrect.Invoke();
             isDEO = true;
             return true;
         }
         if (sol == 4)
         {
+            onCorrect.Invoke();
             isDSO = true;
             return true;
         }
-
+        
         return false;
     }
 
