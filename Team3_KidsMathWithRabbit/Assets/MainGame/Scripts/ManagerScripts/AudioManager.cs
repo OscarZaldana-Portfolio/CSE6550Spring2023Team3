@@ -9,8 +9,8 @@ public class AudioManager : MonoBehaviour
     public AudioSource musicSource;
 
 
-    public void PlaySound(string soundName)    {
-        soundFXSource.PlayOneShot(library.GetClipFromName(soundName), 0.5f);
+    public void PlaySound(string soundName, float volume)    {
+        soundFXSource.PlayOneShot(library.GetClipFromName(soundName), volume);
     }
 
     public void PlayMusic(string soundName, float volume)
@@ -43,7 +43,18 @@ public class AudioManager : MonoBehaviour
         {
             PlayMusic("MainMenuMusic", 0.2f);
         }
+        else if (GameManager.Instance.getNextState() == GameManager.GameStates.MainMenu && GameManager.Instance.getPreviousState() == GameManager.GameStates.Intro)
+        {
+            PlaySound("IntroScene", 1.0f);
+        }
 
+    }
+
+
+    public IEnumerator Transition()
+    {
+        yield return new WaitForSeconds(12.0f);
+        GameManager.Instance.AudioManager.musicSource.Play();
     }
 
 }

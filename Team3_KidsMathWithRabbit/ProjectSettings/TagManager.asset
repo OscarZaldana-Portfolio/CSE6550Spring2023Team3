@@ -48,6 +48,12 @@ TagManager:
   - name: BackGround
     uniqueID: 2141126775
     locked: 0
+  - name: Character
+    uniqueID: 533199895
+    locked: 0
+  - name: Foreground
+    uniqueID: 1284851959
+    locked: 0
   - name: LeafBehindParticalSystem
     uniqueID: 4121762843
     locked: 0
