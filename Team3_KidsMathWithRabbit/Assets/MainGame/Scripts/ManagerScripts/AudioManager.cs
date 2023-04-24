@@ -43,11 +43,6 @@ public class AudioManager : MonoBehaviour
         {
             PlayMusic("MainMenuMusic", 0.2f);
         }
-        else if (GameManager.Instance.getNextState() == GameManager.GameStates.MainMenu && GameManager.Instance.getPreviousState() == GameManager.GameStates.Intro)
-        {
-            PlaySound("IntroScene", 1.0f);
-        }
-
     }
 
 

@@ -27,12 +27,6 @@ public class GameManager : MonoBehaviour
         Transition
     }
 
-    public UnityEvent onMainMenuTransition;
-    public UnityEvent onMultiplicationPuzzleTransition;
-    public UnityEvent onMultiplicationFunTransition;
-    public UnityEvent onMultiplicationQuizTransition;
-    public UnityEvent onMultiplicationPracticeTransition;
-
     private void Awake(){
         //Check to see if there is another existance of this object
         if(Instance != null && Instance != this){
@@ -50,15 +44,6 @@ public class GameManager : MonoBehaviour
             stateSO.CurrentState = GameStates.Intro;
             stateSO.NextState = GameStates.Intro;
         }
-
-        if(stateSO == null)
-        {
-            stateSO.PrevState = GameStates.Intro;
-            stateSO.CurrentState = GameStates.Intro;
-            stateSO.NextState = GameStates.Intro;
-        }
-
-        //DontDestroyOnLoad(this.gameObject);
     }
 
     private void Update()
@@ -67,57 +52,6 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(Transition());
         }
-
-
-
-        //if(stateSO.CurrentState != stateSO.NextState)
-        //{
-        //    if(stateSO.CurrentState == GameStates.MainMenu)
-        //    {
-        //        MainMenuTransition();
-        //    }
-        //    else if (stateSO.CurrentState == GameStates.MultiplicationPuzzle)
-        //    {
-        //        MultiplicationPuzzleTransition();
-        //    }
-        //    else if (stateSO.CurrentState == GameStates.MultiplicationFun)
-        //    {
-        //        MultiplicationFunTransition();
-        //    }
-        //    else if (stateSO.CurrentState == GameStates.MultiplicationQuiz)
-        //    {
-        //        MultiplicationQuizTransition();
-        //    }
-        //    else if (stateSO.CurrentState == GameStates.MultiplicationPractice)
-        //    {
-        //        MultiplicationPracticeTransition();
-        //    }
-        //}
-    }
-
-    void MainMenuTransition()
-    {
-        onMainMenuTransition.Invoke();
-    }
-
-    void MultiplicationPuzzleTransition()
-    {
-        onMultiplicationPuzzleTransition.Invoke();
-    }
-
-    void MultiplicationFunTransition()
-    {
-        onMultiplicationFunTransition.Invoke();
-    }
-
-    void MultiplicationQuizTransition()
-    {
-        onMultiplicationQuizTransition.Invoke();
-    }
-
-    void MultiplicationPracticeTransition()
-    {
-        onMultiplicationPracticeTransition.Invoke();
     }
 
     private IEnumerator Transition()

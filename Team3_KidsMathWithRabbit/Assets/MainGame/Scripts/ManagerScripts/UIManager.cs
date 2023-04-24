@@ -13,19 +13,50 @@ public class UIManager : MonoBehaviour
     public RectTransform smallCloud;
     public GameObject bugsy;
 
+    public AnimationList animList;
 
     private void Awake()
     {
         
     }
 
+    public void OnPlayAnimation(string animationName)
+    {
+        bugsy.GetComponent<Animator>().Play(animList.GetClipFromName(animationName).name);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-       if((GameManager.Instance.getNextState() == GameManager.GameStates.MainMenu && GameManager.Instance.getPreviousState() == GameManager.GameStates.Intro) || GameManager.Instance.getCurrentState() == GameManager.GameStates.Intro)
+        if ((GameManager.Instance.getNextState() == GameManager.GameStates.MainMenu && GameManager.Instance.getPreviousState() == GameManager.GameStates.Intro) || GameManager.Instance.getCurrentState() == GameManager.GameStates.Intro)
         {
-            bugsy.GetComponent<Animator>().Play("IntroBugsy");
-        } 
+            OnPlayAnimation("BugsyIntroScene");
+        }
+
+        if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MainMenu)
+        {
+            InvokeRepeating( "playMainMenuAnim", 0.0f, 10.0f);
+        }
+
+        if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationPuzzle)
+        {
+            //InvokeRepeating("playMainMenuAnim", 0.0f, 10.0f);
+        }
+
+        if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationFun)
+        {
+            //InvokeRepeating("playMainMenuAnim", 0.0f, 10.0f);
+        }
+
+        if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationQuiz)
+        {
+            //InvokeRepeating("playMainMenuAnim", 0.0f, 10.0f);
+        }
+
+        if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationPractice)
+        {
+            //InvokeRepeating("playMainMenuAnim", 0.0f, 10.0f);
+        }
     }
 
     public void OnCorrectSolution()
@@ -36,4 +67,12 @@ public class UIManager : MonoBehaviour
     {
         bugsy.GetComponent<Animator>().Play("NotCorrect");
     }
+
+    void playMainMenuAnim()
+    {
+        OnPlayAnimation("MainMenuScene");
+    }
+
+
+
 }
