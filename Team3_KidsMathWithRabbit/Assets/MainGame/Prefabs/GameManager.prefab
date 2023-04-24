@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5058014080630696292}
   - component: {fileID: 5058014080630696295}
+  - component: {fileID: 1254235824}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -49,6 +50,28 @@ MonoBehaviour:
   bigCloud: {fileID: 0}
   mediumCloud: {fileID: 0}
   smallCloud: {fileID: 0}
+  bugsy: {fileID: 0}
+  animList: {fileID: 1254235824}
+--- !u!114 &1254235824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5058014080630696293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6c9fa4e152e1745b69224bde5a1598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipGroups:
+  - clipGroupID: BugsyIntroScene
+    group:
+    - {fileID: 7400000, guid: 189a37155375c034b94a743ac97e3ece, type: 2}
+  - clipGroupID: MainMenuScene
+    group:
+    - {fileID: 7400000, guid: 6e4d0a1098c3d574f805b1dd773fb5e1, type: 2}
+    - {fileID: 7400000, guid: 9a852751ea85de44b84838703806f0bb, type: 2}
 --- !u!1 &5058014081085009519
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,8 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   library: {fileID: 200362170}
-  soundFXSource: {fileID: 200362172}
-  musicSource: {fileID: 200362171}
+  soundFXSource: {fileID: 200362171}
+  musicSource: {fileID: 200362172}
 --- !u!82 &200362171
 AudioSource:
   m_ObjectHideFlags: 0
@@ -306,9 +329,8 @@ MonoBehaviour:
   soundGroups:
   - audioGroupID: MainMenuMusic
     group:
-    - {fileID: 8300000, guid: 3ae61d9c0e89d6c499f5d9b56718a692, type: 3}
-    - {fileID: 8300000, guid: 3a812644277a82c4282281952758e008, type: 3}
-    - {fileID: 8300000, guid: 9a39b33463208a743a1a9d4a7f6e8ce5, type: 3}
+    - {fileID: 8300000, guid: cbaeda5c8fecac743a6ba861ee7b75e6, type: 3}
+    - {fileID: 8300000, guid: d39287f76643af44e9096de337383f4b, type: 3}
   - audioGroupID: MultiplicationPuzzleMusic
     group:
     - {fileID: 8300000, guid: 3ae61d9c0e89d6c499f5d9b56718a692, type: 3}
@@ -322,20 +344,21 @@ MonoBehaviour:
     group:
     - {fileID: 8300000, guid: 3ae61d9c0e89d6c499f5d9b56718a692, type: 3}
   - audioGroupID: Transition
-    group:
-    - {fileID: 8300000, guid: 3ae61d9c0e89d6c499f5d9b56718a692, type: 3}
+    group: []
   - audioGroupID: WrongAnswer
-    group:
-    - {fileID: 8300000, guid: 3ae61d9c0e89d6c499f5d9b56718a692, type: 3}
+    group: []
   - audioGroupID: CorrectAnswer
     group:
-    - {fileID: 8300000, guid: 3ae61d9c0e89d6c499f5d9b56718a692, type: 3}
+    - {fileID: 8300000, guid: 97aa7a205ac29f34997f7af9440466c4, type: 3}
   - audioGroupID: ProblemSolved
     group:
     - {fileID: 8300000, guid: 79eaa0280e7b40d41a790894fe179c22, type: 3}
+    - {fileID: 8300000, guid: 380ab43c180dfae4f8cbfd9a204dd0ec, type: 3}
   - audioGroupID: SceneButtonSelected
+    group: []
+  - audioGroupID: IntroScene
     group:
-    - {fileID: 8300000, guid: 3ae61d9c0e89d6c499f5d9b56718a692, type: 3}
+    - {fileID: 8300000, guid: a2f4315120ace2146ba0b9845a9bf700, type: 3}
 --- !u!1 &5058014082113675749
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,19 +406,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateSO: {fileID: 11400000, guid: fbea5b0541da14c48a37294c4bad5608, type: 2}
-  transitionTime: 5
-  onMainMenuTransition:
-    m_PersistentCalls:
-      m_Calls: []
-  onMultiplicationPuzzleTransition:
-    m_PersistentCalls:
-      m_Calls: []
-  onMultiplicationFunTransition:
-    m_PersistentCalls:
-      m_Calls: []
-  onMultiplicationQuizTransition:
-    m_PersistentCalls:
-      m_Calls: []
-  onMultiplicationPracticeTransition:
-    m_PersistentCalls:
-      m_Calls: []
+  transitionTime: 2
