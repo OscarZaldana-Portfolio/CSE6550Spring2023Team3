@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public Button[] buttons;
     Color colorB;
     public Animator carrot;
+    public Animator reverseCarrot;
 
     // Start is called before the first frame update
     void Start()
@@ -15,11 +16,7 @@ public class MainMenu : MonoBehaviour
         if(GameManager.Instance.getPreviousState() == GameManager.GameStates.Intro && GameManager.Instance.getCurrentState() == GameManager.GameStates.MainMenu)
         {
             GameManager.Instance.AudioManager.musicSource.Pause();
-            GameManager.Instance.AudioManager.PlaySound("IntrotoMain", 0.5f);
-            if (!GameManager.Instance.AudioManager.soundFXSource.isPlaying)
-            {
-                GameManager.Instance.AudioManager.musicSource.UnPause();
-            }
+            GameManager.Instance.AudioManager.PlaySound("IntrotoMain", 0.7f);
         }
 
         foreach (Button button in buttons)
@@ -29,6 +26,21 @@ public class MainMenu : MonoBehaviour
 
         ColorUtility.TryParseHtmlString("#C8C8C8", out colorB);
 
+        if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MainMenu)
+        {
+            if(GameManager.Instance.getPreviousState() == GameManager.GameStates.MultiplicationPuzzle || GameManager.Instance.getPreviousState() == GameManager.GameStates.MultiplicationFun || GameManager.Instance.getPreviousState() == GameManager.GameStates.MultiplicationQuiz || GameManager.Instance.getPreviousState() == GameManager.GameStates.MultiplicationPractice)
+            {
+                reverseCarrot.Play("reverseCarrots");
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (!GameManager.Instance.AudioManager.soundFXSource.isPlaying)
+        {
+            GameManager.Instance.AudioManager.musicSource.UnPause();
+        }
     }
 
     private void OnButtonClick(Button clickedButton)
@@ -47,11 +59,6 @@ public class MainMenu : MonoBehaviour
                 button.interactable = false;
             }
         }
-    }
-
-    public void MainMenuButtonSound()
-    {
-        GameManager.Instance.AudioManager.PlaySound("", 0.5f);
     }
 
     public void CarrotTransition()

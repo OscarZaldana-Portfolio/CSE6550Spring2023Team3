@@ -406,4 +406,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateSO: {fileID: 11400000, guid: fbea5b0541da14c48a37294c4bad5608, type: 2}
+  playerInfo: {fileID: 11400000, guid: 5e4c4cfec5050064599bb80c23e5d1bd, type: 2}
   transitionTime: 2
+  next: 

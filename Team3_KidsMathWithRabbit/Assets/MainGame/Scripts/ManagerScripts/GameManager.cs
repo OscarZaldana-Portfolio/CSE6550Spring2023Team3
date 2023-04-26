@@ -14,8 +14,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private StateSO stateSO;
+    [SerializeField]
+    private PlayerInfo playerInfo;
     public float transitionTime = 10.0f;
-    string next;
+    public string next;
 
     public enum GameStates{
         Intro,
@@ -103,5 +105,18 @@ public class GameManager : MonoBehaviour
         return stateSO.NextState;
     }
 
+    public int GetLevel()
+    {
+        return playerInfo.PlayerLevel;
+    }
+
+    public void IncrementLevel()
+    {
+        if(playerInfo.PlayerLevel < playerInfo.MaxLevel)
+        {
+            playerInfo.PlayerLevel++;
+        }
+        
+    }
 
 }
