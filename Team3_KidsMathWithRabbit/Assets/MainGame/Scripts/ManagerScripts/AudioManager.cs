@@ -10,7 +10,11 @@ public class AudioManager : MonoBehaviour
 
 
     public void PlaySound(string soundName, float volume)    {
-        soundFXSource.PlayOneShot(library.GetClipFromName(soundName), volume);
+        soundFXSource.clip = library.GetClipFromName(soundName);
+        soundFXSource.volume = volume;
+        soundFXSource.loop = false;
+        soundFXSource.Play();
+        //soundFXSource.PlayOneShot(library.GetClipFromName(soundName), volume);
     }
 
     public void PlayMusic(string soundName, float volume)
@@ -25,23 +29,23 @@ public class AudioManager : MonoBehaviour
     {
         if(GameManager.Instance.getCurrentState() == GameManager.GameStates.MainMenu)
         {
-            PlayMusic("MainMenuMusic", 0.2f);
+            PlayMusic("MainMenuMusic", 0.3f);
         }
         else if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationPuzzle)
         {
-            PlayMusic("MainMenuMusic", 0.2f);
+            PlayMusic("MainMenuMusic", 0.3f);
         }
         else if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationFun)
         {
-            PlayMusic("MainMenuMusic", 0.2f);
+            PlayMusic("MainMenuMusic", 0.3f);
         }
         else if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationQuiz)
         {
-            PlayMusic("MainMenuMusic", 0.2f);
+            PlayMusic("MainMenuMusic", 0.3f);
         }
         else if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationPractice)
         {
-            PlayMusic("MainMenuMusic", 0.2f);
+            PlayMusic("MainMenuMusic", 0.3f);
         }
     }
 

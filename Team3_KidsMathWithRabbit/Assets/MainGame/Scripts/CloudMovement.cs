@@ -10,10 +10,7 @@ public class CloudMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MainMenu)
-        //{
-            moveCloud();
-        //}
+        moveCloud();
 
         if (transform.position.x <= GameManager.Instance.UIManager.leftBarrier.position.x)
         {
