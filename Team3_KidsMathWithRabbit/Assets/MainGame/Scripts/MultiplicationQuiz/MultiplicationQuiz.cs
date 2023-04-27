@@ -27,7 +27,7 @@ public class MultiplicationQuiz : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationFun)
+        if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationQuiz)
         {
             if (GameManager.Instance.getPreviousState() == GameManager.GameStates.MainMenu)
             {
