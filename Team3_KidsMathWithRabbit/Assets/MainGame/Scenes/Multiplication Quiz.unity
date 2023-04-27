@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1226,6 +1226,7 @@ GameObject:
   - component: {fileID: 134211682}
   - component: {fileID: 134211684}
   - component: {fileID: 134211683}
+  - component: {fileID: 134211685}
   m_Layer: 5
   m_Name: Right Operand Text (TMP)
   m_TagString: Untagged
@@ -1352,6 +1353,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134211681}
   m_CullTransparentMesh: 1
+--- !u!114 &134211685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134211681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 366642539}
+          m_TargetAssemblyTypeName: MultiplicationQuiz, Assembly-CSharp
+          m_MethodName: onRightOperandClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &142445570
 GameObject:
   m_ObjectHideFlags: 0
@@ -7948,6 +7978,7 @@ GameObject:
   - component: {fileID: 583063210}
   - component: {fileID: 583063212}
   - component: {fileID: 583063211}
+  - component: {fileID: 583063213}
   m_Layer: 5
   m_Name: Expression Text (TMP)
   m_TagString: Untagged
@@ -8072,6 +8103,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583063209}
   m_CullTransparentMesh: 1
+--- !u!114 &583063213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583063209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 366642539}
+          m_TargetAssemblyTypeName: MultiplicationQuiz, Assembly-CSharp
+          m_MethodName: onExpressionClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &590223155
 GameObject:
   m_ObjectHideFlags: 0
@@ -9495,6 +9555,7 @@ GameObject:
   - component: {fileID: 835570274}
   - component: {fileID: 835570276}
   - component: {fileID: 835570275}
+  - component: {fileID: 835570277}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -9619,6 +9680,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835570273}
   m_CullTransparentMesh: 1
+--- !u!114 &835570277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835570273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 366642539}
+          m_TargetAssemblyTypeName: MultiplicationQuiz, Assembly-CSharp
+          m_MethodName: onChoice2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &901164091
 GameObject:
   m_ObjectHideFlags: 0
@@ -9630,6 +9720,7 @@ GameObject:
   - component: {fileID: 901164092}
   - component: {fileID: 901164094}
   - component: {fileID: 901164093}
+  - component: {fileID: 901164095}
   m_Layer: 5
   m_Name: Equals Operator Text (TMP)
   m_TagString: Untagged
@@ -9754,6 +9845,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901164091}
   m_CullTransparentMesh: 1
+--- !u!114 &901164095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901164091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 366642539}
+          m_TargetAssemblyTypeName: MultiplicationQuiz, Assembly-CSharp
+          m_MethodName: onEqualButtonClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &945422011
 GameObject:
   m_ObjectHideFlags: 0
@@ -9765,6 +9885,7 @@ GameObject:
   - component: {fileID: 945422012}
   - component: {fileID: 945422014}
   - component: {fileID: 945422013}
+  - component: {fileID: 945422015}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -9889,6 +10010,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945422011}
   m_CullTransparentMesh: 1
+--- !u!114 &945422015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945422011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 366642539}
+          m_TargetAssemblyTypeName: MultiplicationQuiz, Assembly-CSharp
+          m_MethodName: onChoice1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!224 &949255400 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6681855582042645638, guid: 607ebf6196732a44491473af3f69bcee, type: 3}
@@ -10197,6 +10347,7 @@ GameObject:
   - component: {fileID: 1213306987}
   - component: {fileID: 1213306989}
   - component: {fileID: 1213306988}
+  - component: {fileID: 1213306990}
   m_Layer: 5
   m_Name: Left Operand Text (TMP)
   m_TagString: Untagged
@@ -10321,6 +10472,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213306986}
   m_CullTransparentMesh: 1
+--- !u!114 &1213306990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213306986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 366642539}
+          m_TargetAssemblyTypeName: MultiplicationQuiz, Assembly-CSharp
+          m_MethodName: onLeftOperandClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1228376380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16793,6 +16973,7 @@ GameObject:
   - component: {fileID: 1666303552}
   - component: {fileID: 1666303554}
   - component: {fileID: 1666303553}
+  - component: {fileID: 1666303555}
   m_Layer: 5
   m_Name: Operation Text (TMP)
   m_TagString: Untagged
@@ -16917,6 +17098,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666303551}
   m_CullTransparentMesh: 1
+--- !u!114 &1666303555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666303551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 366642539}
+          m_TargetAssemblyTypeName: MultiplicationQuiz, Assembly-CSharp
+          m_MethodName: onMultiplicationButtonClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1669753088
 GameObject:
   m_ObjectHideFlags: 0
@@ -17366,6 +17576,7 @@ GameObject:
   - component: {fileID: 1751874128}
   - component: {fileID: 1751874130}
   - component: {fileID: 1751874129}
+  - component: {fileID: 1751874131}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -17490,6 +17701,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751874127}
   m_CullTransparentMesh: 1
+--- !u!114 &1751874131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751874127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 366642539}
+          m_TargetAssemblyTypeName: MultiplicationQuiz, Assembly-CSharp
+          m_MethodName: onChoice3
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1753858028
 PrefabInstance:
   m_ObjectHideFlags: 0
