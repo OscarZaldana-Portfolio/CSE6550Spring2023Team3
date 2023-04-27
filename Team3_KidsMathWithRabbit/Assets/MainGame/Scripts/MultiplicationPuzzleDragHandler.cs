@@ -204,7 +204,7 @@ public class MultiplicationPuzzleDragHandler : MonoBehaviour, IBeginDragHandler,
             isDSO = true;
             return true;
         }
-        
+        GameManager.Instance.AudioManager.PlaySound("WrongAnswer", 0.6f);
         return false;
     }
 

@@ -98,6 +98,7 @@ public class NumberLogic : MonoBehaviour
         middleChoiceText.text = middleChoiceNumber.ToString();
         lowerChoiceText.text = lowerChoiceNumber.ToString();
         solutionText.text = answer.ToString();
+       
     }
     
     public void reset()
@@ -107,10 +108,394 @@ public class NumberLogic : MonoBehaviour
         NextButtonOff();
         UIButtonOn();
     }
+    public void onMultiplicationButtonClick()
+    {
+        GameManager.Instance.AudioManager.PlaySound("Multiply", 1.0f);
 
+    }
+    public void onEqualButtonClick()
+    {
+        GameManager.Instance.AudioManager.PlaySound("EqualTo", 1.0f);
+
+    }
+    public void onLeftOperandClick()
+    {
+        Debug.Log("val of left operand" + leftOperandText);
+        if (leftOperandText)
+
+        {
+            Debug.Log("val of left operand" + leftOperandText.text);
+            switch (leftOperandText.text)
+            {
+                
+                case "1":
+                    GameManager.Instance.AudioManager.PlaySound("One", 1.0f);
+                    break;
+                case "2":
+                    GameManager.Instance.AudioManager.PlaySound("Two", 1.0f);
+                    break;
+                case "3":
+                    GameManager.Instance.AudioManager.PlaySound("Three", 1.0f);
+                    break;
+                case "4":
+                    GameManager.Instance.AudioManager.PlaySound("Four", 1.0f);
+                    break;
+                case "5":
+                    GameManager.Instance.AudioManager.PlaySound("Five", 1.0f);
+                    break;
+                case "6":
+                    GameManager.Instance.AudioManager.PlaySound("Six", 1.0f);
+                    break;
+                case "7":
+                    GameManager.Instance.AudioManager.PlaySound("Seven", 1.0f);
+                    break;
+                case "8":
+                    GameManager.Instance.AudioManager.PlaySound("Eight", 1.0f);
+                    break;
+                case "9":
+                    GameManager.Instance.AudioManager.PlaySound("Nine", 1.0f);
+                    break;
+            }
+        }
+    }
+
+    public void onRightOperandClick()
+    {
+        Debug.Log("val of left operand" + leftOperandText);
+        if (rightOperandText)
+
+        {
+            Debug.Log("val of left operand" + leftOperandText.text);
+            switch (rightOperandText.text)
+            {
+
+                case "1":
+                    GameManager.Instance.AudioManager.PlaySound("One", 1.0f);
+                    break;
+                case "2":
+                    GameManager.Instance.AudioManager.PlaySound("Two", 1.0f);
+                    break;
+                case "3":
+                    GameManager.Instance.AudioManager.PlaySound("Three", 1.0f);
+                    break;
+                case "4":
+                    GameManager.Instance.AudioManager.PlaySound("Four", 1.0f);
+                    break;
+                case "5":
+                    GameManager.Instance.AudioManager.PlaySound("Five", 1.0f);
+                    break;
+                case "6":
+                    GameManager.Instance.AudioManager.PlaySound("Six", 1.0f);
+                    break;
+                case "7":
+                    GameManager.Instance.AudioManager.PlaySound("Seven", 1.0f);
+                    break;
+                case "8":
+                    GameManager.Instance.AudioManager.PlaySound("Eight", 1.0f);
+                    break;
+                case "9":
+                    GameManager.Instance.AudioManager.PlaySound("Nine", 1.0f);
+                    break;
+            }
+        }
+    }
+    public void onClickTop()
+    {
+        Debug.Log("top val " + topChoiceNumber);
+        switch (topChoiceNumber)
+        {
+            case 1:
+                GameManager.Instance.AudioManager.PlaySound("One", 1.0f);
+                break;
+            case 2:
+                GameManager.Instance.AudioManager.PlaySound("Two", 1.0f);
+                break;
+            case 3:
+                GameManager.Instance.AudioManager.PlaySound("Three", 1.0f);
+                break;
+            case 4:
+                GameManager.Instance.AudioManager.PlaySound("Four", 1.0f);
+                break;
+            case 5:
+                GameManager.Instance.AudioManager.PlaySound("Five", 1.0f);
+                break;
+            case 6:
+                GameManager.Instance.AudioManager.PlaySound("Six", 1.0f);
+                break;
+            case 7:
+                GameManager.Instance.AudioManager.PlaySound("Seven", 1.0f);
+                break;
+            case 8:
+                GameManager.Instance.AudioManager.PlaySound("Eight", 1.0f);
+                break;
+            case 9:
+                GameManager.Instance.AudioManager.PlaySound("Nine", 1.0f);
+                break;
+            case 10:
+                GameManager.Instance.AudioManager.PlaySound("Ten", 1.0f);
+                break;
+            case 11:
+                GameManager.Instance.AudioManager.PlaySound("Eleven", 1.0f);
+                break;
+            case 12:
+                GameManager.Instance.AudioManager.PlaySound("Twelve", 1.0f);
+                break;
+            case 13:
+                GameManager.Instance.AudioManager.PlaySound("Thirteen", 1.0f);
+                break;
+            case 14:
+                GameManager.Instance.AudioManager.PlaySound("Fourteen", 1.0f);
+                break;
+            case 15:
+                GameManager.Instance.AudioManager.PlaySound("Fifteen", 1.0f);
+                break;
+            case 16:
+                GameManager.Instance.AudioManager.PlaySound("Sixteen", 1.0f);
+                break;
+            case 17:
+                GameManager.Instance.AudioManager.PlaySound("Seventeen", 1.0f);
+                break;
+            case 18:
+                GameManager.Instance.AudioManager.PlaySound("Eighteen", 1.0f);
+                break;
+            case 19:
+                GameManager.Instance.AudioManager.PlaySound("Nineteen", 1.0f);
+                break;
+            case 20:
+                GameManager.Instance.AudioManager.PlaySound("Twenty", 1.0f);
+                break;
+            case 21:
+                GameManager.Instance.AudioManager.PlaySound("TwentyOne", 1.0f);
+                break;
+            case 22:
+                GameManager.Instance.AudioManager.PlaySound("TwentyTwo", 1.0f);
+                break;
+            case 23:
+                GameManager.Instance.AudioManager.PlaySound("TwentyThree", 1.0f);
+                break;
+            case 24:
+                GameManager.Instance.AudioManager.PlaySound("TwentyFour", 1.0f);
+                break;
+            case 25:
+                GameManager.Instance.AudioManager.PlaySound("TwentyFive", 1.0f);
+                break;
+            case 26:
+                GameManager.Instance.AudioManager.PlaySound("TwentySix", 1.0f);
+                break;
+            case 27:
+                GameManager.Instance.AudioManager.PlaySound("TwentySeven", 1.0f);
+                break;
+            case 28:
+                GameManager.Instance.AudioManager.PlaySound("TwentyEight", 1.0f);
+                break;
+            case 29:
+                GameManager.Instance.AudioManager.PlaySound("TwentyNine", 1.0f);
+                break;
+            case 30:
+                GameManager.Instance.AudioManager.PlaySound("Thirty", 1.0f);
+                break;
+        }
+    }
+    public void onClickMiddle() { 
+        Debug.Log("top val " + middleChoiceNumber);
+        switch (middleChoiceNumber)
+        {
+         
+            case 1:
+                GameManager.Instance.AudioManager.PlaySound("One", 1.0f);
+                break;
+            case 2:
+                GameManager.Instance.AudioManager.PlaySound("Two", 1.0f);
+                break;
+            case 3:
+                GameManager.Instance.AudioManager.PlaySound("Three", 1.0f);
+                break;
+            case 4:
+                GameManager.Instance.AudioManager.PlaySound("Four", 1.0f);
+                break;
+            case 5:
+                GameManager.Instance.AudioManager.PlaySound("Five", 1.0f);
+                break;
+            case 6:
+                GameManager.Instance.AudioManager.PlaySound("Six", 1.0f);
+                break;
+            case 7:
+                GameManager.Instance.AudioManager.PlaySound("Seven", 1.0f);
+                break;
+            case 8:
+                GameManager.Instance.AudioManager.PlaySound("Eight", 1.0f);
+                break;
+            case 9:
+                GameManager.Instance.AudioManager.PlaySound("Nine", 1.0f);
+                break;
+            case 10:
+                GameManager.Instance.AudioManager.PlaySound("Ten", 1.0f);
+                break;
+            case 11:
+                GameManager.Instance.AudioManager.PlaySound("Eleven", 1.0f);
+                break;
+            case 12:
+                GameManager.Instance.AudioManager.PlaySound("Twelve", 1.0f);
+                break;
+            case 13:
+                GameManager.Instance.AudioManager.PlaySound("Thirteen", 1.0f);
+                break;
+            case 14:
+                GameManager.Instance.AudioManager.PlaySound("Fourteen", 1.0f);
+                break;
+            case 15:
+                GameManager.Instance.AudioManager.PlaySound("Fifteen", 1.0f);
+                break;
+            case 16:
+                GameManager.Instance.AudioManager.PlaySound("Sixteen", 1.0f);
+                break;
+            case 17:
+                GameManager.Instance.AudioManager.PlaySound("Seventeen", 1.0f);
+                break;
+            case 18:
+                GameManager.Instance.AudioManager.PlaySound("Eighteen", 1.0f);
+                break;
+            case 19:
+                GameManager.Instance.AudioManager.PlaySound("Nineteen", 1.0f);
+                break;
+            case 20:
+                GameManager.Instance.AudioManager.PlaySound("Twenty", 1.0f);
+                break;
+            case 21:
+                GameManager.Instance.AudioManager.PlaySound("TwentyOne", 1.0f);
+                break;
+            case 22:
+                GameManager.Instance.AudioManager.PlaySound("TwentyTwo", 1.0f);
+                break;
+            case 23:
+                GameManager.Instance.AudioManager.PlaySound("TwentyThree", 1.0f);
+                break;
+            case 24:
+                GameManager.Instance.AudioManager.PlaySound("TwentyFour", 1.0f);
+                break;
+            case 25:
+                GameManager.Instance.AudioManager.PlaySound("TwentyFive", 1.0f);
+                break;
+            case 26:
+                GameManager.Instance.AudioManager.PlaySound("TwentySix", 1.0f);
+                break;
+            case 27:
+                GameManager.Instance.AudioManager.PlaySound("TwentySeven", 1.0f);
+                break;
+            case 28:
+                GameManager.Instance.AudioManager.PlaySound("TwentyEight", 1.0f);
+                break;
+            case 29:
+                GameManager.Instance.AudioManager.PlaySound("TwentyNine", 1.0f);
+                break;
+            case 30:
+                GameManager.Instance.AudioManager.PlaySound("Thirty", 1.0f);
+                break;
+        }
+    }
+    public void onClickLower()
+    {
+        Debug.Log("top val " + lowerChoiceNumber);
+        switch (lowerChoiceNumber)
+        {
+            case 1:
+                GameManager.Instance.AudioManager.PlaySound("One", 1.0f);
+                break;
+            case 2:
+                GameManager.Instance.AudioManager.PlaySound("Two", 1.0f);
+                break;
+            case 3:
+                GameManager.Instance.AudioManager.PlaySound("Three", 1.0f);
+                break;
+            case 4:
+                GameManager.Instance.AudioManager.PlaySound("Four", 1.0f);
+                break;
+            case 5:
+                GameManager.Instance.AudioManager.PlaySound("Five", 1.0f);
+                break;
+            case 6:
+                GameManager.Instance.AudioManager.PlaySound("Six", 1.0f);
+                break;
+            case 7:
+                GameManager.Instance.AudioManager.PlaySound("Seven", 1.0f);
+                break;
+            case 8:
+                GameManager.Instance.AudioManager.PlaySound("Eight", 1.0f);
+                break;
+            case 9:
+                GameManager.Instance.AudioManager.PlaySound("Nine", 1.0f);
+                break;
+            case 10:
+                GameManager.Instance.AudioManager.PlaySound("Ten", 1.0f);
+                break;
+            case 11:
+                GameManager.Instance.AudioManager.PlaySound("Eleven", 1.0f);
+                break;
+            case 12:
+                GameManager.Instance.AudioManager.PlaySound("Twelve", 1.0f);
+                break;
+            case 13:
+                GameManager.Instance.AudioManager.PlaySound("Thirteen", 1.0f);
+                break;
+            case 14:
+                GameManager.Instance.AudioManager.PlaySound("Fourteen", 1.0f);
+                break;
+            case 15:
+                GameManager.Instance.AudioManager.PlaySound("Fifteen", 1.0f);
+                break;
+            case 16:
+                GameManager.Instance.AudioManager.PlaySound("Sixteen", 1.0f);
+                break;
+            case 17:
+                GameManager.Instance.AudioManager.PlaySound("Seventeen", 1.0f);
+                break;
+            case 18:
+                GameManager.Instance.AudioManager.PlaySound("Eighteen", 1.0f);
+                break;
+            case 19:
+                GameManager.Instance.AudioManager.PlaySound("Nineteen", 1.0f);
+                break;
+            case 20:
+                GameManager.Instance.AudioManager.PlaySound("Twenty", 1.0f);
+                break;
+            case 21:
+                GameManager.Instance.AudioManager.PlaySound("TwentyOne", 1.0f);
+                break;
+            case 22:
+                GameManager.Instance.AudioManager.PlaySound("TwentyTwo", 1.0f);
+                break;
+            case 23:
+                GameManager.Instance.AudioManager.PlaySound("TwentyThree", 1.0f);
+                break;
+            case 24:
+                GameManager.Instance.AudioManager.PlaySound("TwentyFour", 1.0f);
+                break;
+            case 25:
+                GameManager.Instance.AudioManager.PlaySound("TwentyFive", 1.0f);
+                break;
+            case 26:
+                GameManager.Instance.AudioManager.PlaySound("TwentySix", 1.0f);
+                break;
+            case 27:
+                GameManager.Instance.AudioManager.PlaySound("TwentySeven", 1.0f);
+                break;
+            case 28:
+                GameManager.Instance.AudioManager.PlaySound("TwentyEight", 1.0f);
+                break;
+            case 29:
+                GameManager.Instance.AudioManager.PlaySound("TwentyNine", 1.0f);
+                break;
+            case 30:
+                GameManager.Instance.AudioManager.PlaySound("Thirty", 1.0f);
+                break;
+        }
+    
+    }
     public void NextButtonON()
     {
         nextButton.SetActive(true);
+        GameManager.Instance.AudioManager.PlaySound("CorrectAnswer", 1.0f);
+        GameManager.Instance.AudioManager.PlaySound("Yaay", 1.0f);
     }
     public void NextButtonOff()
     {
@@ -124,6 +509,11 @@ public class NumberLogic : MonoBehaviour
     public void UIButtonOff()
     {
         UIButton.SetActive(false);
+        GameManager.Instance.AudioManager.PlaySound("NextButton", 1.0f);
+       /* if (!GameManager.Instance.AudioManager.soundFXSource.isPlaying)
+        {
+            GameManager.Instance.AudioManager.musicSource.Pause();
+        }*/
     }
 }
 
