@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
 
         if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MainMenu)
         {
-            InvokeRepeating( "playMainMenuAnim", 0.0f, 10.0f);
+            InvokeRepeating( "MainMenuScene", 0.0f, 10.0f);
         }
 
         if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationPuzzle)
@@ -45,7 +45,7 @@ public class UIManager : MonoBehaviour
 
         if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationFun)
         {
-            //InvokeRepeating("playMainMenuAnim", 0.0f, 10.0f);
+            InvokeRepeating("MultiplicationFun", 0.0f, 10.0f);
         }
 
         if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationQuiz)

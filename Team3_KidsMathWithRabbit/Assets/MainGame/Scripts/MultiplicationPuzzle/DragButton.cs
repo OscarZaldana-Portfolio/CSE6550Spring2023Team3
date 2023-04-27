@@ -9,7 +9,7 @@ public class DragButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public string choice;
     [SerializeField]
     private Canvas canvas;
-    public bool isInCorrectSpot;
+    public bool isInCorrectSpot = false;
     public bool dontMoveBack;
     public Vector3 answerPosition;
     public Vector3 homePosition;
