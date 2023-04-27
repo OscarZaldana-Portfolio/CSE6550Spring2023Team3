@@ -55,6 +55,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             }
             else
             {
+                GameManager.Instance.AudioManager.PlaySound("WrongAnswer", 0.6f);
                 isOnStart = true;
             }
 
