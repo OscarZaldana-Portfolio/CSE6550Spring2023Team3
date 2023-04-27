@@ -82,6 +82,43 @@ public class MultiplicationQuiz : MonoBehaviour
         expression.GetComponentInChildren<TMP_Text>().text = "?";
     }
 
+    public void onLeftOperandClick()
+    {
+       
+            switch (leftOperand.ToString())
+            {
+
+                case "1":
+                    GameManager.Instance.AudioManager.PlaySound("One", 1.0f);
+                    break;
+                case "2":
+                    GameManager.Instance.AudioManager.PlaySound("Two", 1.0f);
+                    break;
+                case "3":
+                    GameManager.Instance.AudioManager.PlaySound("Three", 1.0f);
+                    break;
+                case "4":
+                    GameManager.Instance.AudioManager.PlaySound("Four", 1.0f);
+                    break;
+                case "5":
+                    GameManager.Instance.AudioManager.PlaySound("Five", 1.0f);
+                    break;
+                case "6":
+                    GameManager.Instance.AudioManager.PlaySound("Six", 1.0f);
+                    break;
+                case "7":
+                    GameManager.Instance.AudioManager.PlaySound("Seven", 1.0f);
+                    break;
+                case "8":
+                    GameManager.Instance.AudioManager.PlaySound("Eight", 1.0f);
+                    break;
+                case "9":
+                    GameManager.Instance.AudioManager.PlaySound("Nine", 1.0f);
+                    break;
+            }
+        
+    }
+
     private void addResponse()
     {
         response.Add(slotsA[2]);
@@ -135,6 +172,8 @@ public class MultiplicationQuiz : MonoBehaviour
                 {
                     choice.GetComponent<DragButton>().answerPosition = expression.GetComponent<Transform>().transform.position;
                     choice.GetComponent<DragButton>().isInCorrectSpot = true;
+                    GameManager.Instance.AudioManager.PlaySound("CorrectAnswer", 1.0f);
+                    GameManager.Instance.AudioManager.PlaySound("Yaay", 1.0f);
                 }
                 whenCorrect(choice, expression);
             }
@@ -159,6 +198,8 @@ public class MultiplicationQuiz : MonoBehaviour
             choice.SetActive(false);
             choice.GetComponent<DragButton>().correct = false;
             slot.GetComponent<Slots>().slotAccepting = false;
+            GameManager.Instance.AudioManager.PlaySound("CorrectAnswer", 1.0f);
+            GameManager.Instance.AudioManager.PlaySound("Yaay", 1.0f);
             bugsy.Play("Correct");
             numCorrect++;
         }
@@ -168,6 +209,8 @@ public class MultiplicationQuiz : MonoBehaviour
     {
         if (numCorrect == 1)
         {
+            GameManager.Instance.AudioManager.PlaySound("CorrectAnswer", 1.0f);
+            GameManager.Instance.AudioManager.PlaySound("Yaay", 1.0f);
             nextButton.SetActive(true);
         }
         else

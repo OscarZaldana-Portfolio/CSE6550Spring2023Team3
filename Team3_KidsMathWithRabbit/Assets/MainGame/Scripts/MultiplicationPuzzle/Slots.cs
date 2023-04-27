@@ -32,6 +32,8 @@ public class Slots : MonoBehaviour
     {
         this.gameObject.GetComponent<Image>().enabled = true;
         this.gameObject.GetComponentInChildren<TMP_Text>().color = colorC;
+        GameManager.Instance.AudioManager.PlaySound("CorrectAnswer", 1.0f);
+        GameManager.Instance.AudioManager.PlaySound("Yaay", 1.0f);
         this.slotAccepting = true;
     }
 }
