@@ -9,8 +9,14 @@ public class Slots : MonoBehaviour
     public string answer;
     [SerializeField]
     private Canvas canvas;
+    public bool slotAccepting = true;
+    Color colorC;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        slotAccepting = true;
+        ColorUtility.TryParseHtmlString("#016937", out colorC);
+    }
     void Update()
     {
         answer = GetComponentInChildren<TMP_Text>().text;
@@ -20,5 +26,12 @@ public class Slots : MonoBehaviour
     {
         this.gameObject.GetComponent<Image>().enabled= false;
         this.gameObject.GetComponentInChildren<TMP_Text>().color = Color.white;
+    }
+
+    public void fillSlot()
+    {
+        this.gameObject.GetComponent<Image>().enabled = true;
+        this.gameObject.GetComponentInChildren<TMP_Text>().color = colorC;
+        this.slotAccepting = true;
     }
 }
