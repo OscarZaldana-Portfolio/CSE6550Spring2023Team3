@@ -10,6 +10,8 @@ public class MultiplicationFun : MonoBehaviour
     public Animator reverseCarrot;
     int[] slotsA = new int[3];
     int numCorrect = 0;
+    public TMP_Text left;
+    public TMP_Text right;
     public GameObject leftOperand;
     public GameObject rightOperand;
     public GameObject expression;
@@ -22,7 +24,10 @@ public class MultiplicationFun : MonoBehaviour
     public Canvas canv1;
     public Canvas canv2;
     public Animator bugsy;
-
+    public GameObject leftSpot;
+    public GameObject rightSpot;
+    public List<GameObject> leftRend;
+    public List<GameObject> rightRend;
     List<int> response = new List<int>();
 
     // Start is called before the first frame update
@@ -39,9 +44,12 @@ public class MultiplicationFun : MonoBehaviour
         setAnswers();
         setText();
         addResponse();
+        setOff();
+        SetOn();
         Shuffle(response);
         setChoices();
         response.Clear();
+
     }
 
     // Update is called once per frame
@@ -103,6 +111,23 @@ public class MultiplicationFun : MonoBehaviour
         }
     }
 
+    public void setOff()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            leftRend[i].GetComponent<SpriteRenderer>().enabled = false;
+            rightRend[i].GetComponent<SpriteRenderer>().enabled = false;
+        }
+    }
+
+    public void SetOn()
+    {
+        int n = Random.Range(1, 6);
+        leftRend[n].GetComponent<SpriteRenderer>().enabled = true;
+        rightRend[n].GetComponent<SpriteRenderer>().enabled = true;
+        left.text = "X " + leftOperand.GetComponentInChildren<TMP_Text>().text;
+        right.text = "X " + rightOperand.GetComponentInChildren<TMP_Text>().text;
+    }
 
     public static void Shuffle<T>(List<T> list)
     {
@@ -189,7 +214,10 @@ public class MultiplicationFun : MonoBehaviour
         sideImage.GetComponent<SpriteRenderer>().enabled = false;
         canv1.GetComponent<Canvas>().enabled = false;
         canv2.GetComponent<Canvas>().enabled = false;
-    }
+        leftSpot.GetComponent<SpriteRenderer>().enabled = false;
+        rightSpot.GetComponent<SpriteRenderer>().enabled = false;
+        setOff();
+     }
 
     public void imagesOn()
     {
@@ -197,6 +225,9 @@ public class MultiplicationFun : MonoBehaviour
         sideImage.GetComponent<SpriteRenderer>().enabled = true;
         canv1.GetComponent<Canvas>().enabled = true;
         canv2.GetComponent<Canvas>().enabled = true;
+        leftSpot.GetComponent<SpriteRenderer>().enabled = false;
+        rightSpot.GetComponent<SpriteRenderer>().enabled = false;
+        SetOn();
     }
 
     public void onCorrectAns()
