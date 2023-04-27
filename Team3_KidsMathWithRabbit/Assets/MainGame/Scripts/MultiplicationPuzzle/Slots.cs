@@ -10,17 +10,6 @@ public class Slots : MonoBehaviour
     [SerializeField]
     private Canvas canvas;
 
-    private void Awake()
-    {
-        Vector2 position;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            (RectTransform)canvas.transform,
-            Vector2.zero,
-            canvas.worldCamera,
-            out position);
-        transform.position = canvas.transform.TransformPoint(position);
-    }
-
     // Update is called once per frame
     void Update()
     {

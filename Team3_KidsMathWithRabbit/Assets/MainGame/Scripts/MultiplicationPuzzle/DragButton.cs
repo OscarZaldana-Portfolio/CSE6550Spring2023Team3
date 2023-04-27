@@ -9,7 +9,12 @@ public class DragButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public string choice;
     [SerializeField]
     private Canvas canvas;
-    Transform ParentAfterDrag;
+    public bool isInCorrectSpot;
+    public bool dontMoveBack;
+    public Vector3 answerPosition;
+    public Vector3 homePosition;
+    public bool correct = false;
+
 
     public void DragHandler(BaseEventData data)
     {
@@ -24,19 +29,14 @@ public class DragButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         transform.position = canvas.transform.TransformPoint(position);
     }
 
-
-
-
-
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (gameObject.GetComponentInChildren<ParticleSystem>() != null)
         {
             gameObject.GetComponentInChildren<ParticleSystem>().Play();
         }
-        //ParentAfterDrag = transform.parent;
-        //transform.SetParent(transform.root);
-        //transform.SetAsLastSibling();
+        dontMoveBack = true;
+
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -46,16 +46,27 @@ public class DragButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        
         if (gameObject.GetComponentInChildren<ParticleSystem>() != null)
         {
             gameObject.GetComponentInChildren<ParticleSystem>().Stop();
         }
+
+        if (isInCorrectSpot)
+        {
+            transform.position = answerPosition;
+            correct = true;
+        }
+        else
+        {
+            dontMoveBack = false;   
+        }
     }
 
-        // Start is called before the first frame update
-        void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-        
+        homePosition = transform.position;   
     }
 
     // Update is called once per frame
@@ -64,6 +75,10 @@ public class DragButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         if(gameObject.GetComponentInChildren<TMP_Text>() != null)
         {
             choice = gameObject.GetComponentInChildren<TMP_Text>().text;
+        }
+        if (dontMoveBack == false) 
+        {
+            transform.position = Vector3.Lerp(transform.position, homePosition, 5 * Time.deltaTime);
         }
     }
 }
