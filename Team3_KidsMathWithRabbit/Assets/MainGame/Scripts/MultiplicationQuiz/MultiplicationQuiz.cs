@@ -82,7 +82,42 @@ public class MultiplicationQuiz : MonoBehaviour
         expression.GetComponentInChildren<TMP_Text>().text = "?";
     }
 
-    
+    public void onLeftOperandClick()
+    {
+       
+            switch (leftOperand.ToString())
+            {
+
+                case "1":
+                    GameManager.Instance.AudioManager.PlaySound("One", 1.0f);
+                    break;
+                case "2":
+                    GameManager.Instance.AudioManager.PlaySound("Two", 1.0f);
+                    break;
+                case "3":
+                    GameManager.Instance.AudioManager.PlaySound("Three", 1.0f);
+                    break;
+                case "4":
+                    GameManager.Instance.AudioManager.PlaySound("Four", 1.0f);
+                    break;
+                case "5":
+                    GameManager.Instance.AudioManager.PlaySound("Five", 1.0f);
+                    break;
+                case "6":
+                    GameManager.Instance.AudioManager.PlaySound("Six", 1.0f);
+                    break;
+                case "7":
+                    GameManager.Instance.AudioManager.PlaySound("Seven", 1.0f);
+                    break;
+                case "8":
+                    GameManager.Instance.AudioManager.PlaySound("Eight", 1.0f);
+                    break;
+                case "9":
+                    GameManager.Instance.AudioManager.PlaySound("Nine", 1.0f);
+                    break;
+            }
+        
+    }
 
     private void addResponse()
     {
