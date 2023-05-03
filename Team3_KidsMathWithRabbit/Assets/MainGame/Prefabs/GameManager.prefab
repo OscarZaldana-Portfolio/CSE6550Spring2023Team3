@@ -327,10 +327,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundGroups:
+  - audioGroupID: IntroScene
+    group:
+    - {fileID: 8300000, guid: a2f4315120ace2146ba0b9845a9bf700, type: 3}
+  - audioGroupID: IntrotoMain
+    group:
+    - {fileID: 8300000, guid: 7617b97dc6ff09f4eab86e9e10146a5d, type: 3}
   - audioGroupID: MainMenuMusic
     group:
     - {fileID: 8300000, guid: cbaeda5c8fecac743a6ba861ee7b75e6, type: 3}
     - {fileID: 8300000, guid: d39287f76643af44e9096de337383f4b, type: 3}
+  - audioGroupID: MainMenuButtonClick
+    group:
+    - {fileID: 8300000, guid: b7ad5dd0a1a9c7a4c9fd115dbb8657e4, type: 3}
   - audioGroupID: MultiplicationPuzzleMusic
     group:
     - {fileID: 8300000, guid: 3ae61d9c0e89d6c499f5d9b56718a692, type: 3}
@@ -344,7 +353,8 @@ MonoBehaviour:
     group:
     - {fileID: 8300000, guid: 3ae61d9c0e89d6c499f5d9b56718a692, type: 3}
   - audioGroupID: Transition
-    group: []
+    group:
+    - {fileID: 8300000, guid: b7ad5dd0a1a9c7a4c9fd115dbb8657e4, type: 3}
   - audioGroupID: WrongAnswer
     group: []
   - audioGroupID: CorrectAnswer
@@ -356,9 +366,9 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 380ab43c180dfae4f8cbfd9a204dd0ec, type: 3}
   - audioGroupID: SceneButtonSelected
     group: []
-  - audioGroupID: IntroScene
+  - audioGroupID: ExitButton
     group:
-    - {fileID: 8300000, guid: a2f4315120ace2146ba0b9845a9bf700, type: 3}
+    - {fileID: 8300000, guid: 3bda087f866589c4e977f1dd736e5c24, type: 3}
 --- !u!1 &5058014082113675749
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,5 +417,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateSO: {fileID: 11400000, guid: fbea5b0541da14c48a37294c4bad5608, type: 2}
   playerInfo: {fileID: 11400000, guid: 5e4c4cfec5050064599bb80c23e5d1bd, type: 2}
-  transitionTime: 2
+  transitionTime: 4
   next: 

@@ -8,6 +8,7 @@ public class PlayerInfo : ScriptableObject
     [SerializeField]
     private int _level;
     private int _max;
+    private int _practiceLevel;
 
     public int PlayerLevel
     {
@@ -19,5 +20,11 @@ public class PlayerInfo : ScriptableObject
     {
         get { return _max; }
         set { _max = value; }
+    }
+
+    public int PracticeLevel
+    {
+        get { return _practiceLevel; }
+        set { _practiceLevel = value; }
     }
 }

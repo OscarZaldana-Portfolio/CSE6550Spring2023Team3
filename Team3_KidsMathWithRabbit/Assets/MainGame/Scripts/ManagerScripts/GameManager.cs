@@ -119,4 +119,16 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void SetPracticeLevel(int level)
+    {
+            if(level > 0 && level <= 3)
+        {
+            playerInfo.PracticeLevel = level;
+        }
+        else
+        {
+            playerInfo.PracticeLevel = 3;
+        }  
+    }
+
 }

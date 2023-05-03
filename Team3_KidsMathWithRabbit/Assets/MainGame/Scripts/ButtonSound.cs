@@ -107,6 +107,16 @@ public class ButtonSound : MonoBehaviour
                 break;
         }
     }
+
+    public void MainMenuButtonSelect()
+    {
+        GameManager.Instance.AudioManager.PlaySound("MainMenuButtonClick", 0.8f);
+    }
+
+    public void ExitButtonSelect()
+    {
+        GameManager.Instance.AudioManager.PlaySound("ExitButton", 0.8f);
+    }
 }
 
 
