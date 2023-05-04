@@ -20,6 +20,24 @@ public class SoundList : MonoBehaviour
 
     }
 
+    public AudioClip GetExactClip(string groupName, string clipName)
+    {
+        if (groupDictionary.ContainsKey(groupName))
+        {
+            AudioClip[] sounds = groupDictionary[groupName];
+            foreach (AudioClip audioClip in sounds)
+            {
+                if(audioClip.name == clipName)
+                {
+                    return audioClip;
+                }
+            }
+
+        }
+        return null;
+    }
+
+
     public AudioClip GetClipFromName(string audioName)
     {
         if (groupDictionary.ContainsKey(audioName))

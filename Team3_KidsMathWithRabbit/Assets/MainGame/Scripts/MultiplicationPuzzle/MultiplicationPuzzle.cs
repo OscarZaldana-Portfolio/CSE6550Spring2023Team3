@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class MultiplicationPuzzle : MonoBehaviour
 {
-    public Animator carrot;
     public Animator reverseCarrot;
     int[] slotsA = new int[5];
     int numCorrect = 0;

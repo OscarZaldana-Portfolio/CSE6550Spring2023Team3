@@ -9,6 +9,9 @@ public class MainMenu : MonoBehaviour
     Color colorB;
     public Animator carrot;
     public Animator reverseCarrot;
+    public GameObject[] canvas;
+    public ParticleSystem[] buttonEffects;
+    int tracker = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +19,7 @@ public class MainMenu : MonoBehaviour
         if(GameManager.Instance.getPreviousState() == GameManager.GameStates.Intro && GameManager.Instance.getCurrentState() == GameManager.GameStates.MainMenu)
         {
             GameManager.Instance.AudioManager.musicSource.Pause();
-            GameManager.Instance.AudioManager.PlaySound("IntrotoMain", 0.7f);
+            GameManager.Instance.AudioManager.PlaySound("IntrotoMain", 0.8f);
         }
 
         foreach (Button button in buttons)
@@ -28,18 +31,47 @@ public class MainMenu : MonoBehaviour
 
         if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MainMenu)
         {
-            if(GameManager.Instance.getPreviousState() == GameManager.GameStates.MultiplicationPuzzle || GameManager.Instance.getPreviousState() == GameManager.GameStates.MultiplicationFun || GameManager.Instance.getPreviousState() == GameManager.GameStates.MultiplicationQuiz || GameManager.Instance.getPreviousState() == GameManager.GameStates.MultiplicationPractice)
+            if(GameManager.Instance.getPreviousState() != GameManager.GameStates.Intro && GameManager.Instance.getPreviousState() != GameManager.GameStates.MainMenu)
             {
                 reverseCarrot.Play("reverseCarrots");
             }
+        }
+
+        foreach (GameObject obj in canvas) {
+            obj.SetActive(false);
         }
     }
 
     private void Update()
     {
-        if (!GameManager.Instance.AudioManager.soundFXSource.isPlaying)
+        if (!GameManager.Instance.AudioManager.soundFXSource.isPlaying && GameManager.Instance.getPreviousState() == GameManager.GameStates.Intro)
         {
             GameManager.Instance.AudioManager.musicSource.UnPause();
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (tracker > 0)
+            {
+                tracker--;
+            }
+            foreach(ParticleSystem particle in buttonEffects)
+            {
+                particle.Stop(false);
+            }
+            buttonEffects[tracker].Play();
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            if (tracker < buttonEffects.Length-1)
+            {
+                tracker++;
+            }
+            foreach (ParticleSystem particle in buttonEffects)
+            {
+                particle.Stop(false);
+            }
+            buttonEffects[tracker].Play();
         }
     }
 
@@ -64,6 +96,5 @@ public class MainMenu : MonoBehaviour
     public void CarrotTransition()
     {
         carrot.Play("carrot");
-        GameManager.Instance.AudioManager.PlaySound("Transition", 0.6f);
     }
 }

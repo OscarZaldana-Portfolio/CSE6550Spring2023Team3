@@ -23,7 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MainGame/Scenes/Multiplication Practice.unity
     guid: 44357b33466943a45b5faad72dac762b
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   m_configObjects: {}

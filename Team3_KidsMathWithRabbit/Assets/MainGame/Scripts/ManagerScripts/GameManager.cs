@@ -72,21 +72,25 @@ public class GameManager : MonoBehaviour
             stateSO.NextState = GameStates.MainMenu;
         }
         else if(state == "Multiplication Puzzle"){
+            stateSO.PrevState = stateSO.CurrentState;
             next = state;
             stateSO.CurrentState = GameStates.Transition;
             stateSO.NextState = GameStates.MultiplicationPuzzle;
         }
         else if(state == "Multiplication Fun"){
+            stateSO.PrevState = stateSO.CurrentState;
             next = state;
             stateSO.CurrentState = GameStates.Transition;
             stateSO.NextState = GameStates.MultiplicationFun;
         }
         else if(state == "Multiplication Quiz"){
+            stateSO.PrevState = stateSO.CurrentState;
             next = state;
             stateSO.CurrentState = GameStates.Transition;
             stateSO.NextState = GameStates.MultiplicationQuiz;
         }
         else if(state == "Multiplication Practice"){
+            stateSO.PrevState = stateSO.CurrentState;
             next = state;
             stateSO.CurrentState = GameStates.Transition;
             stateSO.NextState = GameStates.MultiplicationPractice;
@@ -117,6 +121,23 @@ public class GameManager : MonoBehaviour
             playerInfo.PlayerLevel++;
         }
         
+    }
+
+    public void SetPracticeLevel(int level)
+    {
+            if(level > 0 && level <= 3)
+        {
+            playerInfo.PracticeLevel = level;
+        }
+        else
+        {
+            playerInfo.PracticeLevel = 3;
+        }  
+    }
+
+    public int GetPracticeLevel()
+    {
+        return playerInfo.PracticeLevel;
     }
 
 }
