@@ -7,7 +7,9 @@ public class PlayerInfo : ScriptableObject
 {
     [SerializeField]
     private int _level;
+    [SerializeField]
     private int _max;
+    [SerializeField]
     private int _practiceLevel;
 
     public int PlayerLevel

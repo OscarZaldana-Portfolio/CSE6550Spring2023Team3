@@ -369,6 +369,40 @@ MonoBehaviour:
   - audioGroupID: ExitButton
     group:
     - {fileID: 8300000, guid: 3bda087f866589c4e977f1dd736e5c24, type: 3}
+  - audioGroupID: Numbers
+    group:
+    - {fileID: 8300000, guid: 507251705c99c8445b00dde1d97d9103, type: 3}
+    - {fileID: 8300000, guid: f11caa0919905604b910d886b69ed70a, type: 3}
+    - {fileID: 8300000, guid: 8f36ec156c1e7254ab16613591cc6deb, type: 3}
+    - {fileID: 8300000, guid: 4b365246a228ae341a2a51a1f57cc1e7, type: 3}
+    - {fileID: 8300000, guid: 18ee22e3ee2aa19459702f4e9ddadf60, type: 3}
+    - {fileID: 8300000, guid: c3932ba26e30dd44aa9c123dda9115c7, type: 3}
+    - {fileID: 8300000, guid: fd49acd40044e6845812ea4d2bf9bb51, type: 3}
+    - {fileID: 8300000, guid: ddcfab81a2763dc4d93beeeab2ac3136, type: 3}
+    - {fileID: 8300000, guid: 25242b3aee87bfe4c9f46d11a04fade9, type: 3}
+    - {fileID: 8300000, guid: 4a42ba954177a6d4ba98b7ae8c7e4efa, type: 3}
+    - {fileID: 8300000, guid: 691bf88f5d775a548979d6f32b48057d, type: 3}
+    - {fileID: 8300000, guid: 5f1c2a6c34fa6c94daa72b742d23bc87, type: 3}
+    - {fileID: 8300000, guid: a30104cb6a644ae449e1fb2b8e90582b, type: 3}
+    - {fileID: 8300000, guid: 4d18ca72059918744af73be5dbba8d23, type: 3}
+    - {fileID: 8300000, guid: 60fc3b41dcac55e4a801a61805e992d0, type: 3}
+    - {fileID: 8300000, guid: 7265a4423276d37498bfa0a39386c276, type: 3}
+    - {fileID: 8300000, guid: e57b8b9b22bf1ed439ee20e20538e171, type: 3}
+    - {fileID: 8300000, guid: f8c6a74541e69034ba493d60a6d0f0e4, type: 3}
+    - {fileID: 8300000, guid: 95ac4d21f83cde44fa91760ee236811a, type: 3}
+    - {fileID: 8300000, guid: 4c7823e42822b6c40a8b51c7485ed3b8, type: 3}
+    - {fileID: 8300000, guid: af3c717eaadc5fc4aa49658aa073286c, type: 3}
+    - {fileID: 8300000, guid: c85726d94698a534cb7a1380e0b276e7, type: 3}
+    - {fileID: 8300000, guid: a1a629385d24444468f4e1486fa24649, type: 3}
+    - {fileID: 8300000, guid: 84850ad393305164b86aed18d9f5eb10, type: 3}
+    - {fileID: 8300000, guid: c0d2985521b3f8143803657ffd698433, type: 3}
+    - {fileID: 8300000, guid: 8500d50b7cfa9084d9c02d3bd4bd6277, type: 3}
+    - {fileID: 8300000, guid: 17f19b69ca033c64cb6e64be6fdb986d, type: 3}
+    - {fileID: 8300000, guid: e753e99af8d26c443b5e8aeb8e780cfa, type: 3}
+    - {fileID: 8300000, guid: 9de3fedc64bc3cb4c9c29a7d922cb6bc, type: 3}
+    - {fileID: 8300000, guid: 8c260b162b1b3c340b78f3727c3374bc, type: 3}
+    - {fileID: 8300000, guid: c2452d5572ab5d04d94004036e42df25, type: 3}
+    - {fileID: 8300000, guid: 91b66ae2e2c840b4593521128d719d42, type: 3}
 --- !u!1 &5058014082113675749
 GameObject:
   m_ObjectHideFlags: 0

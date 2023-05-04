@@ -8,6 +8,14 @@ public class AudioManager : MonoBehaviour
     public AudioSource soundFXSource;
     public AudioSource musicSource;
 
+    public void PlayExactSounds(string soundName, string clipName, float volume)
+    {
+        soundFXSource.clip = library.GetExactClip(soundName, clipName);
+        soundFXSource.volume = volume;
+        soundFXSource.loop = false;
+        soundFXSource.Play();
+    }
+
 
     public void PlaySound(string soundName, float volume)    {
         soundFXSource.clip = library.GetClipFromName(soundName);
