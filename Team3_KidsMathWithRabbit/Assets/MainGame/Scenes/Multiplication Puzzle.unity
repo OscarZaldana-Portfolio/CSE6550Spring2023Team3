@@ -11614,6 +11614,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 200362170, guid: f35ff63297ae5e64dba6176f80bc89a2, type: 3}
+      propertyPath: soundGroups.Array.data[10].group.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
     - target: {fileID: 5058014080630696295, guid: f35ff63297ae5e64dba6176f80bc89a2, type: 3}
       propertyPath: bugsy
       value: 
