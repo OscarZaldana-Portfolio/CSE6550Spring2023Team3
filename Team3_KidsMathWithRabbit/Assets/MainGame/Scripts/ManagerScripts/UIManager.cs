@@ -28,34 +28,35 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if ((GameManager.Instance.getNextState() == GameManager.GameStates.MainMenu && GameManager.Instance.getPreviousState() == GameManager.GameStates.Intro) || GameManager.Instance.getCurrentState() == GameManager.GameStates.Intro)
+        if (GameManager.Instance.getCurrentState() == GameManager.GameStates.Intro)
         {
+
             OnPlayAnimation("BugsyIntroScene");
         }
 
         if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MainMenu)
         {
-            InvokeRepeating( "MainMenuScene", 0.0f, 10.0f);
+            InvokeRepeating("playMainMenuAnim", 0.0f, 10.0f);
         }
 
         if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationPuzzle)
         {
-            //InvokeRepeating("playMainMenuAnim", 0.0f, 10.0f);
+            InvokeRepeating("playMultiplicationPuzzleAnim", 0.0f, 10.0f);
         }
 
         if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationFun)
         {
-            InvokeRepeating("MultiplicationFun", 0.0f, 10.0f);
+            InvokeRepeating("playMultiplicationFunAnim", 0.0f, 10.0f);
         }
 
         if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationQuiz)
         {
-            //InvokeRepeating("playMainMenuAnim", 0.0f, 10.0f);
+            InvokeRepeating("playMultiplicationQuizAnim", 0.0f, 10.0f);
         }
 
         if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationPractice)
         {
-            //InvokeRepeating("playMainMenuAnim", 0.0f, 10.0f);
+            InvokeRepeating("playMultiplicationPracticeAnim", 0.0f, 10.0f);
         }
     }
 
@@ -68,11 +69,28 @@ public class UIManager : MonoBehaviour
         bugsy.GetComponent<Animator>().Play("NotCorrect");
     }
 
-    void playMainMenuAnim()
+    public void playMainMenuAnim()
     {
         OnPlayAnimation("MainMenuScene");
     }
 
+    public void playMultiplicationPuzzleAnim()
+    {
+        OnPlayAnimation("MultiplicationPuzzleScene");
+    }
 
+    public void playMultiplicationFunAnim()
+    {
+        OnPlayAnimation("MultiplicationFunScene");
+    }
 
+    public void playMultiplicationQuizAnim()
+    {
+        OnPlayAnimation("MultiplicationQuizScene");
+    }
+
+    public void playMultiplicationPracticeAnim()
+    {
+        OnPlayAnimation("MultiplicationPracticeScene");
+    }
 }

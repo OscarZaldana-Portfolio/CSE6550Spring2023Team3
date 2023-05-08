@@ -59,8 +59,12 @@ public class GameManager : MonoBehaviour
     private IEnumerator Transition()
     {
         yield return new WaitForSeconds(transitionTime);
-        stateSO.CurrentState = stateSO.NextState;
-        SceneManager.LoadScene(next);
+        if(next == "MainMenu" || next == "Multiplication Puzzle" || next == "Multiplication Fun" || next == "Multiplication Quiz" || next == "Multiplication Practice")
+        {
+            stateSO.CurrentState = stateSO.NextState;
+            SceneManager.LoadScene(next);
+        }
+        
     }
 
     public void changeState(string state)
@@ -94,6 +98,10 @@ public class GameManager : MonoBehaviour
             next = state;
             stateSO.CurrentState = GameStates.Transition;
             stateSO.NextState = GameStates.MultiplicationPractice;
+        }
+        else
+        {
+
         }
     }
 

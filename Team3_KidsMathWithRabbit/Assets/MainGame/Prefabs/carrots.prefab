@@ -1378,8 +1378,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7446424282120456586}
   - component: {fileID: 7446424282120456585}
-  - component: {fileID: 7446424282120456584}
-  - component: {fileID: 7446424282120456587}
   m_Layer: 5
   m_Name: carrots
   m_TagString: Untagged
@@ -1472,34 +1470,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &7446424282120456584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7446424282828145387}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fc8b373c7102af41829c5e8c4ae2324, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
---- !u!111 &7446424282120456587
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7446424282828145387}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 2f1312c071a0d40489753bf70bd5310f, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &7446424282897164549
 GameObject:
   m_ObjectHideFlags: 0

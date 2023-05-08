@@ -12,19 +12,15 @@ public class ButtonSound : MonoBehaviour
         {
             case "1":
                 GameManager.Instance.AudioManager.PlayExactSounds("Numbers", "ONE", 1.0f);
-                //GameManager.Instance.AudioManager.PlaySound("Numbers", 1.0f);
                 break;
             case "2":
                 GameManager.Instance.AudioManager.PlayExactSounds("Numbers", "TWO", 1.0f);
-                //GameManager.Instance.AudioManager.PlaySound("Numbers", 1.0f);
                 break;
             case "3":
                 GameManager.Instance.AudioManager.PlayExactSounds("Numbers", "THREE", 1.0f);
-                //GameManager.Instance.AudioManager.PlaySound("Numbers", 1.0f);
                 break;
             case "4":
                 GameManager.Instance.AudioManager.PlayExactSounds("Numbers", "FOUR", 1.0f);
-                //GameManager.Instance.AudioManager.PlaySound("Numbers", 1.0f);
                 break;
             case "5":
                 GameManager.Instance.AudioManager.PlayExactSounds("Numbers", "FIVE", 1.0f);
@@ -108,7 +104,7 @@ public class ButtonSound : MonoBehaviour
                 GameManager.Instance.AudioManager.PlayExactSounds("Numbers", "Multiply", 1.0f);
                 break;
             case "=":
-                GameManager.Instance.AudioManager.PlayExactSounds("Numbers", "EqualTo", 1.0f);
+                GameManager.Instance.AudioManager.PlayExactSounds("Numbers", "Equals", 1.0f);
                 break;
         }
     }
@@ -125,7 +121,7 @@ public class ButtonSound : MonoBehaviour
 
     public void buttonSpawnSound()
     {
-        GameManager.Instance.AudioManager.PlaySound("", 1.0f);
+        GameManager.Instance.AudioManager.PlaySound("ButtonPOP", 1.0f);
     }
 }
 

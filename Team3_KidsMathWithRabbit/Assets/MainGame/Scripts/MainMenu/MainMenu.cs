@@ -7,7 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     public Button[] buttons;
     Color colorB;
-    public Animator carrot;
     public Animator reverseCarrot;
     public GameObject[] canvas;
     public ParticleSystem[] buttonEffects;
@@ -49,30 +48,7 @@ public class MainMenu : MonoBehaviour
             GameManager.Instance.AudioManager.musicSource.UnPause();
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            if (tracker > 0)
-            {
-                tracker--;
-            }
-            foreach(ParticleSystem particle in buttonEffects)
-            {
-                particle.Stop(false);
-            }
-            buttonEffects[tracker].Play();
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            if (tracker < buttonEffects.Length-1)
-            {
-                tracker++;
-            }
-            foreach (ParticleSystem particle in buttonEffects)
-            {
-                particle.Stop(false);
-            }
-            buttonEffects[tracker].Play();
-        }
+        ButtonEffect();
     }
 
     private void OnButtonClick(Button clickedButton)
@@ -93,8 +69,31 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void CarrotTransition()
+    public void ButtonEffect()
     {
-        carrot.Play("carrot");
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (tracker > 0)
+            {
+                tracker--;
+            }
+            foreach (ParticleSystem particle in buttonEffects)
+            {
+                particle.Stop(false);
+            }
+            buttonEffects[tracker].Play();
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            if (tracker < buttonEffects.Length - 1)
+            {
+                tracker++;
+            }
+            foreach (ParticleSystem particle in buttonEffects)
+            {
+                particle.Stop(false);
+            }
+            buttonEffects[tracker].Play();
+        }
     }
 }

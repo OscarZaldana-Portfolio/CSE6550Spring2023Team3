@@ -3,70 +3,134 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.UI;
 
 public class DragButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public string choice;
+    public string choiceText;
     [SerializeField]
     private Canvas canvas;
     public bool isInCorrectSpot = false;
-    public bool dontMoveBack;
+    public bool beingGrabbed = false;
+    public bool correct = false;
+    public bool atWrongNumber = false;
+    public bool clickable = true;
+    public int slotNumber;
+    public int slotSetNumber = 0;
+    Animator anim;
     public Vector3 answerPosition;
     public Vector3 homePosition;
-    public bool correct = false;
+    
 
-
+    //Handles the drag movement by matching it to the screen rather then the canvas
     public void DragHandler(BaseEventData data)
     {
-        PointerEventData pointerData = (PointerEventData)data;
+        if(clickable)
+        {
+            PointerEventData pointerData = (PointerEventData)data;
 
-        Vector2 position;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            (RectTransform)canvas.transform,
-            pointerData.position,
-            canvas.worldCamera,
-            out position);
-        transform.position = canvas.transform.TransformPoint(position);
+            Vector2 position;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                (RectTransform)canvas.transform,
+                pointerData.position,
+                canvas.worldCamera,
+                out position);
+            transform.position = canvas.transform.TransformPoint(position);
+        }
+    }
+
+    public void OnClicked()
+    {
+        if (clickable)
+        {
+            beingGrabbed = true;
+            anim.enabled = false;
+            if (gameObject.GetComponentInChildren<ParticleSystem>() != null)
+            {
+                gameObject.GetComponentInChildren<ParticleSystem>().Play();
+            }
+        }
+    }
+
+    public void OnUnClicked()
+    {
+        if (clickable)
+        {
+            beingGrabbed = false;
+            anim.enabled = true;
+            float dis = Vector2.Distance(homePosition, answerPosition);
+            if (gameObject.GetComponentInChildren<ParticleSystem>() != null)
+            {
+                gameObject.GetComponentInChildren<ParticleSystem>().Stop();
+            }
+
+            if (isInCorrectSpot)
+            {
+                CorrectSpot();
+            }
+            else
+            {
+                if (atWrongNumber)
+                {
+                    GameManager.Instance.AudioManager.PlaySound("WrongAnswer", 0.6f);
+                }
+                else
+                {
+                    GameManager.Instance.AudioManager.PlaySound("ButtonHeadsBack", 1.0f);
+                }
+            }
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (gameObject.GetComponentInChildren<ParticleSystem>() != null)
-        {
-            gameObject.GetComponentInChildren<ParticleSystem>().Play();
-        }
-        dontMoveBack = true;
 
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+       
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         
-        if (gameObject.GetComponentInChildren<ParticleSystem>() != null)
-        {
-            gameObject.GetComponentInChildren<ParticleSystem>().Stop();
-        }
+    }
 
-        if (isInCorrectSpot)
-        {
-            transform.position = answerPosition;
-            correct = true;
-        }
-        else
-        {
-            dontMoveBack = false;   
-        }
+    public void CorrectSpot()
+    {
+        slotSetNumber = slotNumber;
+        transform.position = answerPosition;
+        correct = true;
+        this.gameObject.GetComponent<Image>().enabled = false;
+        choiceText = "";
+        clickable = false;
+        anim.enabled = false;
+    }
+
+    public void ResetChoices()
+    {
+        transform.position = homePosition;
+        correct = false;
+        this.gameObject.GetComponent<Image>().enabled = true;
+        anim.enabled = true;
+        clickable = true;
+    }
+
+    public void PlayAnim(string source)
+    {
+        anim.Play(source);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        homePosition = transform.position;   
+        //Save the homePosition
+        homePosition = transform.position;
+        if (GetComponent<Animator>() != null)
+        {
+            anim = GetComponent<Animator>();
+        }
     }
 
     // Update is called once per frame
@@ -74,9 +138,9 @@ public class DragButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     {
         if(gameObject.GetComponentInChildren<TMP_Text>() != null)
         {
-            choice = gameObject.GetComponentInChildren<TMP_Text>().text;
+            gameObject.GetComponentInChildren<TMP_Text>().text = choiceText;
         }
-        if (dontMoveBack == false) 
+        if (beingGrabbed == false && correct == false) 
         {
             transform.position = Vector3.Lerp(transform.position, homePosition, 5 * Time.deltaTime);
         }

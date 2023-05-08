@@ -159,7 +159,7 @@ public class MultiplicationQuiz : MonoBehaviour
         if (choice.GetComponent<DragButton>().correct == true)
         {
             expression.GetComponentInChildren<TMP_Text>().text = slotsA[2].ToString();
-            slot.GetComponent<Slots>().emptySlot();
+            slot.GetComponent<Slots>().CorrectSlot();
             choice.SetActive(false);
             choice.GetComponent<DragButton>().correct = false;
             slot.GetComponent<Slots>().slotAccepting = false;
@@ -205,9 +205,6 @@ public class MultiplicationQuiz : MonoBehaviour
         setButton(choice3);
 
         nextButton.SetActive(false);
-        leftOperand.GetComponent<Slots>().fillSlot();
-        rightOperand.GetComponent<Slots>().fillSlot();
-        expression.GetComponent<Slots>().fillSlot();
 
         setAnswers();
         setText();
@@ -221,7 +218,7 @@ public class MultiplicationQuiz : MonoBehaviour
     void setButton(GameObject choice)
     {
         choice.SetActive(true);
-        choice.GetComponent<DragButton>().dontMoveBack = false;
+        choice.GetComponent<DragButton>().beingGrabbed = false;
         choice.GetComponent<DragButton>().isInCorrectSpot = false;
         choice.GetComponent<DragButton>().correct = false;
 
