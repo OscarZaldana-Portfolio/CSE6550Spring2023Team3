@@ -90,10 +90,10 @@ MonoBehaviour:
     - {fileID: 7400000, guid: 9a852751ea85de44b84838703806f0bb, type: 2}
   - clipGroupID: NotCorrect
     group:
-    - {fileID: 7400000, guid: 6e4d0a1098c3d574f805b1dd773fb5e1, type: 2}
+    - {fileID: 7400000, guid: 1b6d4ff37831eb2498112504c3fc65c2, type: 2}
   - clipGroupID: Correct
     group:
-    - {fileID: 7400000, guid: 6e4d0a1098c3d574f805b1dd773fb5e1, type: 2}
+    - {fileID: 7400000, guid: b1c4848a2e09d124b958c238cb5d17c3, type: 2}
 --- !u!1 &5058014081085009519
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +382,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 20a2f8969af8d234f90b64010770c29e, type: 3}
   - audioGroupID: CorrectAnswer
     group:
-    - {fileID: 8300000, guid: 97aa7a205ac29f34997f7af9440466c4, type: 3}
+    - {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
   - audioGroupID: ProblemSolved
     group:
     - {fileID: 8300000, guid: 79eaa0280e7b40d41a790894fe179c22, type: 3}
@@ -432,6 +432,9 @@ MonoBehaviour:
   - audioGroupID: ButtonPOP
     group:
     - {fileID: 8300000, guid: dfbfeb512869bcb4991b465ed7ad88c5, type: 3}
+  - audioGroupID: CarrotSound
+    group:
+    - {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
 --- !u!1 &5058014082113675749
 GameObject:
   m_ObjectHideFlags: 0

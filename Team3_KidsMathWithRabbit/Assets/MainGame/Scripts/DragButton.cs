@@ -19,8 +19,7 @@ public class DragButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public int slotSetNumber = 0;
     Animator anim;
     public Vector3 answerPosition;
-    public Vector3 homePosition;
-    
+    public Vector3 homePosition;    
 
     //Handles the drag movement by matching it to the screen rather then the canvas
     public void DragHandler(BaseEventData data)
@@ -45,9 +44,10 @@ public class DragButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         {
             beingGrabbed = true;
             anim.enabled = false;
-            if (gameObject.GetComponentInChildren<ParticleSystem>() != null)
+            if (gameObject.GetComponentsInChildren<ParticleSystem>() != null)
             {
-                gameObject.GetComponentInChildren<ParticleSystem>().Play();
+                gameObject.GetComponentsInChildren<ParticleSystem>()[0].Play();
+                gameObject.GetComponentsInChildren<ParticleSystem>()[1].Play();
             }
         }
     }
@@ -59,9 +59,10 @@ public class DragButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             beingGrabbed = false;
             anim.enabled = true;
             float dis = Vector2.Distance(homePosition, answerPosition);
-            if (gameObject.GetComponentInChildren<ParticleSystem>() != null)
+            if (gameObject.GetComponentsInChildren<ParticleSystem>() != null)
             {
-                gameObject.GetComponentInChildren<ParticleSystem>().Stop();
+                gameObject.GetComponentsInChildren<ParticleSystem>()[0].Stop();
+                gameObject.GetComponentsInChildren<ParticleSystem>()[1].Stop();
             }
 
             if (isInCorrectSpot)
@@ -73,6 +74,7 @@ public class DragButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
                 if (atWrongNumber)
                 {
                     GameManager.Instance.AudioManager.PlaySound("WrongAnswer", 0.6f);
+                    GameManager.Instance.UIManager.OnPlayAnimation("NotCorrect");
                 }
                 else
                 {
@@ -99,6 +101,7 @@ public class DragButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void CorrectSpot()
     {
+        GameManager.Instance.UIManager.OnPlayAnimation("Correct");
         slotSetNumber = slotNumber;
         transform.position = answerPosition;
         correct = true;

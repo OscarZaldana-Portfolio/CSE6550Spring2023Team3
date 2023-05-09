@@ -6,12 +6,13 @@ using UnityEngine.UI;
 
 public class MultiplicationQuiz : MonoBehaviour
 {
-    public Animator carrot;
     public Animator reverseCarrot;
-    int[] slotsA = new int[3];
+    int[] slotsA = new int[5];
     int numCorrect = 0;
     public GameObject leftOperand;
+    public GameObject operation;
     public GameObject rightOperand;
+    public GameObject equalOperation;
     public GameObject expression;
     public GameObject choice1;
     public GameObject choice2;
@@ -20,9 +21,12 @@ public class MultiplicationQuiz : MonoBehaviour
     public GameObject backGroundImage;
     public Canvas canv1;
     public Canvas canv2;
-    public Animator bugsy;
 
-    List<int> response = new List<int>();
+    float dis1;
+    float dis2;
+    float dis3;
+
+    List<string> response = new List<string>();
 
     // Start is called before the first frame update
     void Start()
@@ -35,12 +39,9 @@ public class MultiplicationQuiz : MonoBehaviour
             }
         }
         nextButton.SetActive(false);
-        setAnswers();
         setText();
-        addResponse();
-        Shuffle(response);
         setChoices();
-        response.Clear();
+
     }
 
     // Update is called once per frame
@@ -50,60 +51,65 @@ public class MultiplicationQuiz : MonoBehaviour
         if (choice2 != null) { inRightSpot(choice2); }
         if (choice3 != null) { inRightSpot(choice3); }
 
-        allCorrect();
+        AllCorrect();
     }
 
     public void setAnswers()
     {
-        if (GameManager.Instance.GetLevel() == 1)
-        {
-            slotsA[0] = Random.Range(1, 6);
-            slotsA[1] = Random.Range(1, 6);
-            slotsA[2] = slotsA[0] * slotsA[1];
-        }
-        else if (GameManager.Instance.GetLevel() == 2)
-        {
-            slotsA[0] = Random.Range(1, 11);
-            slotsA[1] = Random.Range(1, 11);
-            slotsA[2] = slotsA[0] * slotsA[1];
-        }
-        else if (GameManager.Instance.GetLevel() == 3)
-        {
-            slotsA[0] = Random.Range(1, 20);
-            slotsA[1] = Random.Range(1, 20);
-            slotsA[2] = slotsA[0] * slotsA[1];
-        }
+        leftOperand.GetComponentInChildren<Slots>().ChooseNumber();
+        rightOperand.GetComponentInChildren<Slots>().ChooseNumber();
+        expression.GetComponentInChildren<Slots>().answerNumber = leftOperand.GetComponentInChildren<Slots>().answerNumber * rightOperand.GetComponentInChildren<Slots>().answerNumber;
     }
 
     public void setText()
     {
-        leftOperand.GetComponentInChildren<TMP_Text>().text = slotsA[0].ToString();
-        rightOperand.GetComponentInChildren<TMP_Text>().text = slotsA[1].ToString();
-        expression.GetComponentInChildren<TMP_Text>().text = "?";
+        //Randomize the values
+        setAnswers();
+        //Set the text to match the values
+        leftOperand.GetComponentInChildren<Slots>().SetText();
+        operation.GetComponentInChildren<Slots>().answerText = "X";
+        rightOperand.GetComponentInChildren<Slots>().SetText();
+        equalOperation.GetComponentInChildren<Slots>().answerText = "=";
+        expression.GetComponentInChildren<Slots>().answerText = "?";
+        //Allow buttons to be moved to slots
+        leftOperand.GetComponentInChildren<Slots>().slotAccepting = false;
+        operation.GetComponentInChildren<Slots>().slotAccepting = false;
+        rightOperand.GetComponentInChildren<Slots>().slotAccepting = false;
+        equalOperation.GetComponentInChildren<Slots>().slotAccepting = false;
+        expression.GetComponentInChildren<Slots>().slotAccepting = true;
+        //Set the starting color
+        leftOperand.GetComponentInChildren<Slots>().SetTextColor("#FAFAFA");
+        operation.GetComponentInChildren<Slots>().SetTextColor("#FAFAFA");
+        rightOperand.GetComponentInChildren<Slots>().SetTextColor("#FAFAFA");
+        equalOperation.GetComponentInChildren<Slots>().SetTextColor("#FAFAFA");
+        expression.GetComponentInChildren<Slots>().SetTextColor("#FAFAFA");
+        //Set the back image
+        leftOperand.GetComponentInChildren<Image>().enabled = false;
+        operation.GetComponentInChildren<Image>().enabled = false;
+        rightOperand.GetComponentInChildren<Image>().enabled = false;
+        equalOperation.GetComponentInChildren<Image>().enabled = false;
+        expression.GetComponentInChildren<Image>().enabled = true;
     }
-
-    
 
     private void addResponse()
     {
-        response.Add(slotsA[2]);
         if (GameManager.Instance.GetLevel() == 1)
         {
-            response.Add(Random.Range(1, 6));
-            response.Add(Random.Range(1, 6));
+            response.Add(Random.Range(0, 6).ToString());
+            response.Add(Random.Range(0, 6).ToString());
         }
         else if (GameManager.Instance.GetLevel() == 2)
         {
-            response.Add(Random.Range(1, 11));
-            response.Add(Random.Range(1, 11));
+            response.Add(Random.Range(0, 11).ToString());
+            response.Add(Random.Range(0, 11).ToString());
         }
-        else if (GameManager.Instance.GetLevel() == 3)
+        else
         {
-            response.Add(Random.Range(1, 21));
-            response.Add(Random.Range(1, 21));
+            response.Add(Random.Range(0, 21).ToString());
+            response.Add(Random.Range(0, 21).ToString());
         }
+        response.Add(expression.GetComponentInChildren<Slots>().answerNumber.ToString());
     }
-
 
     public static void Shuffle<T>(List<T> list)
     {
@@ -120,61 +126,87 @@ public class MultiplicationQuiz : MonoBehaviour
 
     void setChoices()
     {
-        choice1.GetComponentInChildren<TMP_Text>().text = response[0].ToString();
-        choice2.GetComponentInChildren<TMP_Text>().text = response[1].ToString();
-        choice3.GetComponentInChildren<TMP_Text>().text = response[2].ToString();
+        addResponse();
+        Shuffle(response);
+        //set text of choices
+        choice1.GetComponentInChildren<DragButton>().choiceText = response[0];
+        choice2.GetComponentInChildren<DragButton>().choiceText = response[1];
+        choice3.GetComponentInChildren<DragButton>().choiceText = response[2];
+        //Allow buttons to be clickable
+        choice1.GetComponentInChildren<DragButton>().clickable = true;
+        choice2.GetComponentInChildren<DragButton>().clickable = true;
+        choice3.GetComponentInChildren<DragButton>().clickable = true;
+        response.Clear();
     }
 
     void inRightSpot(GameObject choice)
     {
-        float dis5 = Vector2.Distance(expression.GetComponent<Transform>().transform.position, choice.GetComponent<Transform>().transform.position);
-
-        if (dis5 < 1)
+        if (choice.GetComponent<DragButton>().beingGrabbed == true)
         {
-            if (int.Parse(choice.GetComponentInChildren<TMP_Text>().text) == slotsA[2])
+            dis1 = Vector2.Distance(expression.GetComponent<Transform>().transform.position, choice.GetComponent<Transform>().transform.position);
+
+            CheckSlot(dis1, choice);
+        }
+        else
+        {
+            if (choice.GetComponent<DragButton>().correct == true)
+            {
+                choice.GetComponent<DragButton>().correct = false;
+                choice.GetComponent<DragButton>().isInCorrectSpot = false;
+                expression.GetComponent<DragButton>().CorrectSpot();
+                numCorrect++;
+                //if (choice.GetComponent<DragButton>().slotSetNumber == 1)
+                //{
+                //    leftOperand.GetComponent<Slots>().CorrectSlot();
+                //    numCorrect++;
+                //}
+                //else if (choice.GetComponent<DragButton>().slotSetNumber == 2)
+                //{
+                //    operation.GetComponent<Slots>().CorrectSlot();
+                //    numCorrect++;
+                //}
+                //else if (choice.GetComponent<DragButton>().slotSetNumber == 3)
+                //{
+                //    rightOperand.GetComponent<Slots>().CorrectSlot();
+                //    numCorrect++;
+                //}
+                //choice.GetComponent<DragButton>().slotSetNumber = 0;
+            }
+        }
+    }
+
+
+    void CheckSlot(float dis1, GameObject choice)
+    {
+        if (dis1 < 1)
+        {
+            if (choice.GetComponent<DragButton>().choiceText == expression.GetComponent<Slots>().answerText)
             {
                 if (expression.GetComponent<Slots>().slotAccepting == true)
                 {
                     choice.GetComponent<DragButton>().answerPosition = expression.GetComponent<Transform>().transform.position;
                     choice.GetComponent<DragButton>().isInCorrectSpot = true;
-                    GameManager.Instance.AudioManager.PlaySound("CorrectAnswer", 1.0f);
-                    GameManager.Instance.AudioManager.PlaySound("Yaay", 1.0f);
                 }
-                whenCorrect(choice, expression);
             }
             else
             {
-                choice.GetComponent<DragButton>().isInCorrectSpot = false;
-                bugsy.Play("NotCorrect");
+                if (expression.GetComponent<Slots>().slotAccepting == true)
+                {
+                    choice.GetComponent<DragButton>().atWrongNumber = true;
+                }
             }
         }
         else
         {
             choice.GetComponent<DragButton>().isInCorrectSpot = false;
+            choice.GetComponent<DragButton>().atWrongNumber = false;
         }
     }
 
-    void whenCorrect(GameObject choice, GameObject slot)
+    void AllCorrect()
     {
-        if (choice.GetComponent<DragButton>().correct == true)
+        if (numCorrect == 5)
         {
-            expression.GetComponentInChildren<TMP_Text>().text = slotsA[2].ToString();
-            slot.GetComponent<Slots>().CorrectSlot();
-            choice.SetActive(false);
-            choice.GetComponent<DragButton>().correct = false;
-            slot.GetComponent<Slots>().slotAccepting = false;
-            GameManager.Instance.AudioManager.PlaySound("CorrectAnswer", 1.0f);
-            GameManager.Instance.AudioManager.PlaySound("Yaay", 1.0f);
-            bugsy.Play("Correct");
-            numCorrect++;
-        }
-    }
-    void allCorrect()
-    {
-        if (numCorrect == 1)
-        {
-            GameManager.Instance.AudioManager.PlaySound("CorrectAnswer", 1.0f);
-            GameManager.Instance.AudioManager.PlaySound("Yaay", 1.0f);
             nextButton.SetActive(true);
         }
         else
@@ -195,32 +227,25 @@ public class MultiplicationQuiz : MonoBehaviour
         backGroundImage.GetComponent<SpriteRenderer>().enabled = true;
         canv1.GetComponent<Canvas>().enabled = true;
         canv2.GetComponent<Canvas>().enabled = true;
+        choice1.GetComponent<DragButton>().PlayAnim("Choice1Intro");
+        choice2.GetComponent<DragButton>().PlayAnim("Choice2Intro");
+        choice3.GetComponent<DragButton>().PlayAnim("Choice3Intro");
     }
 
 
     public void ResetScene()
     {
-        setButton(choice1);
-        setButton(choice2);
-        setButton(choice3);
-
         nextButton.SetActive(false);
-
-        setAnswers();
         setText();
-        addResponse();
-        Shuffle(response);
         setChoices();
-        response.Clear();
+        setButton();
         numCorrect = 0;
     }
 
-    void setButton(GameObject choice)
+    void setButton()
     {
-        choice.SetActive(true);
-        choice.GetComponent<DragButton>().beingGrabbed = false;
-        choice.GetComponent<DragButton>().isInCorrectSpot = false;
-        choice.GetComponent<DragButton>().correct = false;
-
+        choice1.GetComponent<DragButton>().ResetChoices();
+        choice2.GetComponent<DragButton>().ResetChoices();
+        choice3.GetComponent<DragButton>().ResetChoices();
     }
 }

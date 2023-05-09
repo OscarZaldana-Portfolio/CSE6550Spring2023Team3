@@ -23,6 +23,7 @@ public class MultiplicationPuzzle : MonoBehaviour
     public GameObject backGroundImage;
     public Canvas canv1;
     public Canvas canv2;
+    public ParticleSystem confetti;
 
     float dis1;
     float dis2;
@@ -297,6 +298,13 @@ public class MultiplicationPuzzle : MonoBehaviour
         if (numCorrect == 5)
         {
             nextButton.SetActive(true);
+            leftOperand.GetComponent<Animator>().Play("LeftOperandSolved");
+            operation.GetComponent<Animator>().Play("OperationSolved");
+            rightOperand.GetComponent<Animator>().Play("RightOperandSolved");
+            equalOperation.GetComponent<Animator>().Play("EqualOperationSolved");
+            expression.GetComponent<Animator>().Play("ExpressionSolved");
+            GameManager.Instance.AudioManager.musicSource.Pause();
+            confetti.Play();
         }
         else
         {
@@ -309,6 +317,7 @@ public class MultiplicationPuzzle : MonoBehaviour
         backGroundImage.GetComponent<SpriteRenderer>().enabled = false;
         canv1.GetComponent<Canvas>().enabled = false;
         canv2.GetComponent<Canvas>().enabled = false;
+        confetti.Stop();
     }
 
     public void imagesOn()
@@ -321,6 +330,7 @@ public class MultiplicationPuzzle : MonoBehaviour
         choice3.GetComponent<DragButton>().PlayAnim("Choice3Intro");
         choice4.GetComponent<DragButton>().PlayAnim("Choice4Intro");
         choice5.GetComponent<DragButton>().PlayAnim("Choice5Intro");
+        GameManager.Instance.AudioManager.musicSource.UnPause();
     }
 
 
@@ -331,6 +341,11 @@ public class MultiplicationPuzzle : MonoBehaviour
         setChoices();
         setButton();
         numCorrect = 0;
+        leftOperand.GetComponent<Animator>().Play("LeftOperandIdle");
+        operation.GetComponent<Animator>().Play("OperationIdle");
+        rightOperand.GetComponent<Animator>().Play("RightOperandIdle");
+        equalOperation.GetComponent<Animator>().Play("EqualOperationIdle");
+        expression.GetComponent<Animator>().Play("ExpressionIdle");
     }
 
     void setButton()

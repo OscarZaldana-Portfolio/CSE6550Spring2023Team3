@@ -10,6 +10,9 @@ public class ButtonSound : MonoBehaviour
     {
         switch (GetComponentInChildren<TMP_Text>().text)
         {
+            case "0":
+                GameManager.Instance.AudioManager.PlayExactSounds("Numbers", "ZERO", 1.0f);
+                break;
             case "1":
                 GameManager.Instance.AudioManager.PlayExactSounds("Numbers", "ONE", 1.0f);
                 break;
@@ -122,6 +125,16 @@ public class ButtonSound : MonoBehaviour
     public void buttonSpawnSound()
     {
         GameManager.Instance.AudioManager.PlaySound("ButtonPOP", 1.0f);
+    }
+
+    public void CarrotSound()
+    {
+        GameManager.Instance.AudioManager.PlaySound("CarrotSound", 0.4f);
+    }
+
+    public void YaySound()
+    {
+        GameManager.Instance.AudioManager.PlaySound("Yay", 1.0f);
     }
 }
 

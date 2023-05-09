@@ -41,22 +41,21 @@ public class AudioManager : MonoBehaviour
         }
         else if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationPuzzle)
         {
-            PlayMusic("MainMenuMusic", 0.3f);
+            PlayMusic("MultiplicationPuzzleMusic", 0.3f);
         }
         else if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationFun)
         {
-            PlayMusic("MainMenuMusic", 0.3f);
+            PlayMusic("MultiplicationFunMusic", 0.3f);
         }
         else if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationQuiz)
         {
-            PlayMusic("MainMenuMusic", 0.3f);
+            PlayMusic("MultiplicationQuizMusic", 0.3f);
         }
         else if (GameManager.Instance.getCurrentState() == GameManager.GameStates.MultiplicationPractice)
         {
-            PlayMusic("MainMenuMusic", 0.3f);
+            PlayMusic("MultiplicationPracticeMusic", 0.3f);
         }
     }
-
 
     public IEnumerator Transition()
     {

@@ -55,10 +55,10 @@ public class Slots : MonoBehaviour
         }
         colorC = Color.white;
         GameManager.Instance.AudioManager.PlaySound("CorrectAnswer",1.0f);
-        //if(particle != null)
-        //{
-        //    particle.Play();
-        //}
+        if (particle != null)
+        {
+            particle.Play();
+        }
     }
 
     void Update()
