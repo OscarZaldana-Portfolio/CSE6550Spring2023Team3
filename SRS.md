@@ -3,7 +3,7 @@
 | Date  | Updates |
 | ------------- | ------------- |
 | 10 May, 2023 |  ● Updated all the sections of SRS <br>| 
-| 01 May, 2023 |  ● Updated System Features 6 <br> ● Adjust Questions Based on Difficulty Level <br>	1. Description and Priorities <br>	2. Stimulus/Response <br>  	3. Functional Requirements <br> 2. Updated UML Sequence Diagram <b> 3. Updated Multiplication Practice Screen |
+| 01 May, 2023 |  ● Updated System Features 6 <br> ● Adjust Questions Based on Difficulty Level <br>	1. Description and Priorities <br>	2. Stimulus/Response <br>  3. Functional Requirements <br> 2. Updated UML Sequence Diagram <br> 3. Updated Multiplication Practice Screen |
 | 24 April, 2023 |  ● Updated System Features 5 <br> ● Multiplication Practice Screen <br> 1.	Description and Priorities <br> 2.	Stimulus/Response <br> 3.	Functional Requirements <br> 4.	Updated Software Quality Attributes <br> 2. Updated UML Use Case, Sequence diagrams <br> 3. Updated New Screens| 
 | 17 April, 2023 |  ● Updated Other Requirements <br> ●	Storage Solution <br> ●	Design <br> ●	Task <br> ●	Cohesiveness |
 | 10 April, 2023 | ●	Updated Congratulations Screen <br> ●	Other Non-Functional Requirements <br> ●	Performance Requirements <br> ●	Safety Requirements <br> ●	Updated New screens |
