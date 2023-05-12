@@ -3233,7 +3233,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 200
+        value: 300
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -13383,7 +13383,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 200
+        value: 300
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -22396,7 +22396,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.033333335
+  - time: 0.16666667
     functionName: CarrotSound
     data: 
     objectReferenceParameter: {fileID: 0}

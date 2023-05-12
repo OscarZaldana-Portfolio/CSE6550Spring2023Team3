@@ -364,16 +364,20 @@ MonoBehaviour:
     - {fileID: 8300000, guid: b7ad5dd0a1a9c7a4c9fd115dbb8657e4, type: 3}
   - audioGroupID: MultiplicationPuzzleMusic
     group:
-    - {fileID: 8300000, guid: 3ae61d9c0e89d6c499f5d9b56718a692, type: 3}
+    - {fileID: 8300000, guid: d39287f76643af44e9096de337383f4b, type: 3}
+    - {fileID: 8300000, guid: d39287f76643af44e9096de337383f4b, type: 3}
   - audioGroupID: MultiplicationFunMusic
     group:
-    - {fileID: 8300000, guid: 3ae61d9c0e89d6c499f5d9b56718a692, type: 3}
+    - {fileID: 8300000, guid: cbaeda5c8fecac743a6ba861ee7b75e6, type: 3}
+    - {fileID: 8300000, guid: d39287f76643af44e9096de337383f4b, type: 3}
   - audioGroupID: MultiplicationQuizMusic
     group:
-    - {fileID: 8300000, guid: 3ae61d9c0e89d6c499f5d9b56718a692, type: 3}
+    - {fileID: 8300000, guid: cbaeda5c8fecac743a6ba861ee7b75e6, type: 3}
+    - {fileID: 8300000, guid: d39287f76643af44e9096de337383f4b, type: 3}
   - audioGroupID: MultiplicationPracticeMusic
     group:
-    - {fileID: 8300000, guid: 3ae61d9c0e89d6c499f5d9b56718a692, type: 3}
+    - {fileID: 8300000, guid: cbaeda5c8fecac743a6ba861ee7b75e6, type: 3}
+    - {fileID: 8300000, guid: d39287f76643af44e9096de337383f4b, type: 3}
   - audioGroupID: Transition
     group:
     - {fileID: 8300000, guid: b7ad5dd0a1a9c7a4c9fd115dbb8657e4, type: 3}
@@ -394,6 +398,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 3bda087f866589c4e977f1dd736e5c24, type: 3}
   - audioGroupID: Numbers
     group:
+    - {fileID: 8300000, guid: 990b622c9b957f041a4aaac713254fae, type: 3}
     - {fileID: 8300000, guid: 507251705c99c8445b00dde1d97d9103, type: 3}
     - {fileID: 8300000, guid: f11caa0919905604b910d886b69ed70a, type: 3}
     - {fileID: 8300000, guid: 8f36ec156c1e7254ab16613591cc6deb, type: 3}
@@ -435,6 +440,19 @@ MonoBehaviour:
   - audioGroupID: CarrotSound
     group:
     - {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
+  - audioGroupID: Yay
+    group:
+    - {fileID: 8300000, guid: 921f7def63b537244b16ed63994477d7, type: 3}
+  - audioGroupID: Sparkle
+    group:
+    - {fileID: 8300000, guid: 6bc72961a3d2efb43b3f4e90eaa52203, type: 3}
+  - audioGroupID: SupportShouts
+    group:
+    - {fileID: 8300000, guid: 6c7285230a4dcbd4c94d44175b25d08d, type: 3}
+    - {fileID: 8300000, guid: 389a374c38721fb49a15dca295499987, type: 3}
+  - audioGroupID: SolveThePuzzle
+    group:
+    - {fileID: 8300000, guid: 403000ec3457ebd499dccb3f7b7de8b9, type: 3}
 --- !u!1 &5058014082113675749
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,8 @@ public class MultiplicationPuzzle : MonoBehaviour
     public Canvas canv1;
     public Canvas canv2;
     public ParticleSystem confetti;
+    float timeRemaining = 10f;
+    private bool isTimerRunning = false;
 
     float dis1;
     float dis2;
@@ -46,7 +48,8 @@ public class MultiplicationPuzzle : MonoBehaviour
         nextButton.SetActive(false);
         setText();  
         setChoices();
-        
+        GameManager.Instance.AudioManager.PlaySound("SolveThePuzzle", 1.0f);
+        isTimerRunning = true;
     }
 
     // Update is called once per frame
@@ -305,10 +308,23 @@ public class MultiplicationPuzzle : MonoBehaviour
             expression.GetComponent<Animator>().Play("ExpressionSolved");
             GameManager.Instance.AudioManager.musicSource.Pause();
             confetti.Play();
+            isTimerRunning = false;
         }
         else
         {
             nextButton.SetActive(false);
+            if (isTimerRunning)
+            {
+                if (timeRemaining > 0f)
+                {
+                    timeRemaining -= Time.deltaTime;
+                }
+                else
+                {
+                    // timer has ended, do something
+                    ShoutSupport();
+                }
+            }
         }
     }
 
@@ -331,6 +347,7 @@ public class MultiplicationPuzzle : MonoBehaviour
         choice4.GetComponent<DragButton>().PlayAnim("Choice4Intro");
         choice5.GetComponent<DragButton>().PlayAnim("Choice5Intro");
         GameManager.Instance.AudioManager.musicSource.UnPause();
+        isTimerRunning = true;
     }
 
 
@@ -355,5 +372,10 @@ public class MultiplicationPuzzle : MonoBehaviour
         choice3.GetComponent<DragButton>().ResetChoices();
         choice4.GetComponent<DragButton>().ResetChoices();
         choice5.GetComponent<DragButton>().ResetChoices();
+    }
+
+    void ShoutSupport() {
+        GameManager.Instance.AudioManager.PlaySound("SupportShouts", 1.0f);
+        timeRemaining = 10.0f;
     }
 }

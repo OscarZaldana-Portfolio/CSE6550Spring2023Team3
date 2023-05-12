@@ -136,6 +136,11 @@ public class ButtonSound : MonoBehaviour
     {
         GameManager.Instance.AudioManager.PlaySound("Yay", 1.0f);
     }
+
+    public void SparkleSound()
+    {
+        GameManager.Instance.AudioManager.PlaySound("Sparkle", 1.0f);
+    }
 }
 
 

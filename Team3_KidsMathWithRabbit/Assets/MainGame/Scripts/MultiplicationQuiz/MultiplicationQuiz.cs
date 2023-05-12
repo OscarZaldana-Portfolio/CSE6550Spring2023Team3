@@ -21,6 +21,9 @@ public class MultiplicationQuiz : MonoBehaviour
     public GameObject backGroundImage;
     public Canvas canv1;
     public Canvas canv2;
+    public ParticleSystem confetti;
+    float timeRemaining = 10f;
+    private bool isTimerRunning = false;
 
     float dis1;
     float dis2;
@@ -41,7 +44,8 @@ public class MultiplicationQuiz : MonoBehaviour
         nextButton.SetActive(false);
         setText();
         setChoices();
-
+        GameManager.Instance.AudioManager.PlaySound("SolveThePuzzle", 1.0f);
+        isTimerRunning = true;
     }
 
     // Update is called once per frame
@@ -153,24 +157,13 @@ public class MultiplicationQuiz : MonoBehaviour
             {
                 choice.GetComponent<DragButton>().correct = false;
                 choice.GetComponent<DragButton>().isInCorrectSpot = false;
-                expression.GetComponent<DragButton>().CorrectSpot();
-                numCorrect++;
-                //if (choice.GetComponent<DragButton>().slotSetNumber == 1)
-                //{
-                //    leftOperand.GetComponent<Slots>().CorrectSlot();
-                //    numCorrect++;
-                //}
-                //else if (choice.GetComponent<DragButton>().slotSetNumber == 2)
-                //{
-                //    operation.GetComponent<Slots>().CorrectSlot();
-                //    numCorrect++;
-                //}
-                //else if (choice.GetComponent<DragButton>().slotSetNumber == 3)
-                //{
-                //    rightOperand.GetComponent<Slots>().CorrectSlot();
-                //    numCorrect++;
-                //}
-                //choice.GetComponent<DragButton>().slotSetNumber = 0;
+                if (choice.GetComponent<DragButton>().slotSetNumber == 1)
+                {
+                    expression.GetComponent<Slots>().CorrectSlot();
+                    expression.GetComponent<Slots>().SetText();
+                    numCorrect++;
+                }
+                choice.GetComponent<DragButton>().slotSetNumber = 0;
             }
         }
     }
@@ -180,12 +173,13 @@ public class MultiplicationQuiz : MonoBehaviour
     {
         if (dis1 < 1)
         {
-            if (choice.GetComponent<DragButton>().choiceText == expression.GetComponent<Slots>().answerText)
+            if (choice.GetComponent<DragButton>().choiceText == expression.GetComponent<Slots>().answerNumber.ToString())
             {
                 if (expression.GetComponent<Slots>().slotAccepting == true)
                 {
                     choice.GetComponent<DragButton>().answerPosition = expression.GetComponent<Transform>().transform.position;
                     choice.GetComponent<DragButton>().isInCorrectSpot = true;
+                    choice.GetComponent<DragButton>().slotNumber = 1;
                 }
             }
             else
@@ -200,18 +194,48 @@ public class MultiplicationQuiz : MonoBehaviour
         {
             choice.GetComponent<DragButton>().isInCorrectSpot = false;
             choice.GetComponent<DragButton>().atWrongNumber = false;
+            choice.GetComponent<DragButton>().slotNumber = 0;
         }
     }
 
     void AllCorrect()
     {
-        if (numCorrect == 5)
+        if (numCorrect == 1)
         {
+            choice1.GetComponent<Animator>().Play("Choice1Idle");
+            choice2.GetComponent<Animator>().Play("Choice2Idle");
+            choice3.GetComponent<Animator>().Play("Choice3Idle");
+            choice1.GetComponentInChildren<TMP_Text>().text = "";
+            choice2.GetComponentInChildren<TMP_Text>().text = "";
+            choice3.GetComponentInChildren<TMP_Text>().text = "";
+            choice1.GetComponent<DragButton>().clickable = false;
+            choice2.GetComponent<DragButton>().clickable = false;
+            choice3.GetComponent<DragButton>().clickable = false;
             nextButton.SetActive(true);
+            leftOperand.GetComponent<Animator>().Play("LeftOperandSolved");
+            operation.GetComponent<Animator>().Play("OperationSolved");
+            rightOperand.GetComponent<Animator>().Play("RightOperandSolved");
+            equalOperation.GetComponent<Animator>().Play("EqualOperationSolved");
+            expression.GetComponent<Animator>().Play("ExpressionSolved");
+            GameManager.Instance.AudioManager.musicSource.Pause();
+            confetti.Play();
+            isTimerRunning = false;
         }
         else
         {
             nextButton.SetActive(false);
+            if (isTimerRunning)
+            {
+                if (timeRemaining > 0f)
+                {
+                    timeRemaining -= Time.deltaTime;
+                }
+                else
+                {
+                    // timer has ended, do something
+                    ShoutSupport();
+                }
+            }
         }
     }
 
@@ -220,16 +244,22 @@ public class MultiplicationQuiz : MonoBehaviour
         backGroundImage.GetComponent<SpriteRenderer>().enabled = false;
         canv1.GetComponent<Canvas>().enabled = false;
         canv2.GetComponent<Canvas>().enabled = false;
+        confetti.Stop();
     }
 
     public void imagesOn()
     {
+        choice1.GetComponent<Image>().enabled = true;
+        choice2.GetComponent<Image>().enabled = true;
+        choice3.GetComponent<Image>().enabled = true;
         backGroundImage.GetComponent<SpriteRenderer>().enabled = true;
         canv1.GetComponent<Canvas>().enabled = true;
         canv2.GetComponent<Canvas>().enabled = true;
         choice1.GetComponent<DragButton>().PlayAnim("Choice1Intro");
         choice2.GetComponent<DragButton>().PlayAnim("Choice2Intro");
         choice3.GetComponent<DragButton>().PlayAnim("Choice3Intro");
+        GameManager.Instance.AudioManager.musicSource.UnPause();
+        isTimerRunning = true;
     }
 
 
@@ -240,6 +270,11 @@ public class MultiplicationQuiz : MonoBehaviour
         setChoices();
         setButton();
         numCorrect = 0;
+        leftOperand.GetComponent<Animator>().Play("LeftOperandIdle");
+        operation.GetComponent<Animator>().Play("OperationIdle");
+        rightOperand.GetComponent<Animator>().Play("RightOperandIdle");
+        equalOperation.GetComponent<Animator>().Play("EqualOperationIdle");
+        expression.GetComponent<Animator>().Play("ExpressionIdle");
     }
 
     void setButton()
@@ -247,5 +282,11 @@ public class MultiplicationQuiz : MonoBehaviour
         choice1.GetComponent<DragButton>().ResetChoices();
         choice2.GetComponent<DragButton>().ResetChoices();
         choice3.GetComponent<DragButton>().ResetChoices();
+    }
+
+    void ShoutSupport()
+    {
+        GameManager.Instance.AudioManager.PlaySound("SupportShouts", 1.0f);
+        timeRemaining = 10.0f;
     }
 }

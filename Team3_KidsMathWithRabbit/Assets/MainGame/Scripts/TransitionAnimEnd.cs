@@ -6,10 +6,9 @@ using UnityEngine.Events;
 public class TransitionAnimEnd : MonoBehaviour
 {
     public UnityEvent onEnd;
-    public Animator GoodJobAnim;
+    public GameObject goodJob;
     public int count;
-    //public ParticleSystem particleSystem1; 
-    //public ParticleSystem particleSystem2; 
+    public int endNum;
     public void callBoard()
     {
         onEnd.Invoke();
@@ -22,16 +21,19 @@ public class TransitionAnimEnd : MonoBehaviour
 
     public void playGoodJob()
     {
-        if (count % 3 == 0)
+        if (count % endNum == 0)
         {
-            GoodJobAnim.Play("goodJobConfetti");
-            //GetComponent<ParticleSystem>().GetComponent<ParticleSystem>().enableEmission = true;
+            goodJob.GetComponent<Animator>().Play("GoodJob");
+            goodJob.GetComponentsInChildren<ParticleSystem>()[0].Play();
+            goodJob.GetComponentsInChildren<ParticleSystem>()[1].Play();
+            count = 0;
         }
     }
 
     public void stopParticles()
     {
-        //GetComponent<ParticleSystem>().GetComponent<ParticleSystem>().enableEmission = false;
+        goodJob.GetComponentsInChildren<ParticleSystem>()[0].Stop();
+        goodJob.GetComponentsInChildren<ParticleSystem>()[1].Stop();
     }
 
 
