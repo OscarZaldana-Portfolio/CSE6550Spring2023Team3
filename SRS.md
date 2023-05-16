@@ -1,3 +1,4 @@
+[Software.Requirement.Specification.docx Team3_ (1).pdf](https://github.com/OscarZaldana-Portfolio/CSE6550Spring2023Team3/files/11491678/Software.Requirement.Specification.docx.Team3_.1.pdf)
 [Software.Requirement.Specification.docx Team3_.docx](https://github.com/OscarZaldana-Portfolio/CSE6550Spring2023Team3/files/11449195/Software.Requirement.Specification.docx.Team3_.docx)
 
 
